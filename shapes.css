@@ -1,0 +1,54 @@
+/*-------SHAPE SECTION-----------*/
+
+#shape-section {
+  background-size: 1600px 1000px;
+  width: 100vw;
+  height: 100vh;
+  padding: 10%;
+  text-align: center;
+  font-family: blinker, arial;
+  font-size: 2em;
+  color: white;
+  width: 65%;
+}
+
+.shape {
+  display: inline-block;
+  margin: 0px;
+  padding: 100px;
+  width: 100px;
+  box-shadow: 5px 10px 5px grey;
+}
+
+#purple-shape {
+  background-color: var(--my-purple);
+  border-radius: 20% 50%;
+  position: relative;
+  bottom: 0px;
+  transform: rotate(-50deg);
+  right: 50px;
+}
+
+#orange-shape {
+  background-color: var(--my-orange);
+  border-radius: 50% 20%;
+  transform: rotate(50deg);
+  left: 50px;
+}
+
+#blue-shape {
+background-color: var(--my-bright-blue);
+border-radius: 20% 50%;
+position: relative;
+bottom: 50px;
+transform: rotate(-50deg)
+}
+
+#yellow-shape {
+  background-color: var(--my-yellow);
+  border-radius: 50% 20%;
+  position: relative;
+  transform: rotate(60deg);
+  bottom: 50px;
+  right: 50px;
+};
