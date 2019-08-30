@@ -1,0 +1,53 @@
+.main-container {
+  height: 100%;
+  width: 100%;
+  border: 1px red solid;
+}
+
+.header {
+  height: 20px;
+  width: 100%;
+  background-color: rgb(36, 36, 117);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  border: 1px red solid;
+  text-align: right;
+}
+
+.nav {
+  height: 40px;
+  width: 100%;
+  background-color: burlywood;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.nav a{
+  padding: 5px;
+  border: 1px white solid;
+}
+
+#blog-container {
+  width: 100%;
+  background-color: rgb(187, 255, 232);
+  /* text-align: center; */
+}
+
+#blog-section {
+  margin: 0 auto;
+  width: 60%;
+  height: 100%;
+  background-color: cornsilk;
+}
+
+.blog {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 20px 0 20px 0;
+  background-color: whitesmoke;
+  border: 1px red solid;
+}
+
+.blog p {
+  margin-top: 0;
+}
