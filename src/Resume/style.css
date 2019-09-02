@@ -1,0 +1,33 @@
+* {background-color: black;}
+#start {
+  background-color: black;
+  color: whitesmoke;
+  height: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+#start h1 {
+  font-size: 4em;
+  padding: 174px;
+}
+
+#building-bonds{
+  border: 1px red solid;
+  width: 45%;
+  height: 500px;
+  display: inline-block;
+}
+
+#breaking-bads {
+  border: 1px red solid;
+  width: 45%;
+  height: 500px;
+  display: inline-block;
+}
+
+#more {
+  height: 200px;
+  display: block;
+  border: 1px red solid;
+}
