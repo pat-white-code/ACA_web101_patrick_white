@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+
+a{
+  color: black;
+  text-decoration: none;
+}
 .main-container {
   height: 100%;
   width: 100%;;
@@ -58,6 +63,7 @@
   height: 500px;
   background-color:rgb(212, 211, 211);
   overflow: scroll; 
+  scroll-behavior: smooth;
 }
 
 .blog {
@@ -65,7 +71,7 @@
   margin: 10 auto;
   background-color: whitesmoke;
   padding: 1px 0px 8px 11px;
-  box-shadow: 5px 5px 3px #888888;
+  box-shadow: 5px 5px 10px #888888;
   width: 90%;
   transition: background-color 0.5s;
 }
