@@ -1,9 +1,9 @@
 * {
-  background-color: black;
+  background-color: rgb(10, 10, 20);
 }
 
 #start {
-  background-color: black;
+  background-color: rgb(10, 10, 20);
   color: whitesmoke;
   height: 1000px;
   width: 100%;
@@ -53,6 +53,8 @@ nav span:hover{
   text-align: left;
   font-family: roboto;
 }
+
+/* FIXME: MAKE RESPONSIVE TO MOBILE SO DIVIDER BECOMES HORIZONTAL */
 
 #divider {
   display: inline-block;
