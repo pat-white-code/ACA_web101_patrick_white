@@ -89,8 +89,35 @@ nav span:hover{
   margin-top: 80px;
 }
 
-#more img {
+img[src="./images/down-arrow-white.png"]{
+    height: 50px;
+    margin: 41px;
+    opacity: .7;
+  };
+
+/* #more img {
   height: 50px;
   margin: 41px;
   opacity: .7;
+} */
+
+section #about-me {
+  height: 700px;
+  width: 100%;
+  background-color: rgb(206, 216, 206);
+  color: rgb(10, 10, 20);
+  border: 1px red solid;
+}
+
+#about-me h2 {
+  text-align: center;
+  color: rgb(10, 10, 20);
+}
+
+div #about-container{
+  margin: auto 0;
+  width: 70%;
+  height: 400px;
+  border: 1px red solid;
+  background-color: rgb(206, 216, 206);
 }
