@@ -62,6 +62,7 @@ nav span:hover{
   height: 27em;
   transform: rotate(31deg);
   background-color: rgb(206, 216, 206);
+  opacity: .8;
 }
 
 #breaking-bads {
@@ -90,4 +91,5 @@ nav span:hover{
 #more img {
   height: 50px;
   margin: 41px;
+  opacity: .7;
 }
