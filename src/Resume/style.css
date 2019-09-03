@@ -1,4 +1,7 @@
-* {background-color: black;}
+* {
+  background-color: black;
+}
+
 #start {
   background-color: black;
   color: whitesmoke;
@@ -6,28 +9,83 @@
   width: 100%;
   text-align: center;
 }
+#start nav {
+  height: 40px;
+  color: rgb(8, 164, 255);
+  font-size: 18px;
+  text-align: right;
+  font-family: roboto;
+}
+
+nav span {
+  margin: 20px;
+  transition: color .5s;
+}
+
+nav span:hover{
+  color: rgb(255, 51, 51);
+}
 
 #start h1 {
   font-size: 4em;
-  padding: 174px;
+  padding: 85px;
+}
+
+#logo-holder {
+  width: 85%;
+  margin: 0 auto;
+}
+
+#logo-holder img {
+  width: 75%;
+  margin: 30px;
+}
+
+#logo-holder h2 {
+  font-size: 32px;
 }
 
 #building-bonds{
-  border: 1px red solid;
+  /* border: 1px red solid; */
   width: 45%;
   height: 500px;
   display: inline-block;
+  text-align: left;
+  font-family: roboto;
+}
+
+#divider {
+  display: inline-block;
+  width: 21px;
+  height: 27em;
+  transform: rotate(31deg);
+  background-color: whitesmoke;
 }
 
 #breaking-bads {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   width: 45%;
   height: 500px;
   display: inline-block;
+  text-align: right;
+  /* color:#FF0008; */
+  font-family: roboto;
+  color: whitesmoke;
+}
+
+#building-bonds img, #breaking-bads img {
+  border: 12px red dotted;
+  border-radius: 100%;
 }
 
 #more {
-  height: 200px;
+  height: 50px;
   display: block;
-  border: 1px red solid;
+  font-family: roboto;
+  margin-top: 80px;
+}
+
+#more img {
+  height: 50px;
+  margin: 41px;
 }
