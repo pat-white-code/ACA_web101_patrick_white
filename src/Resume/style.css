@@ -4,7 +4,7 @@
 
 #start {
   background-color: rgb(10, 10, 20);
-  color: whitesmoke;
+  color: rgb(206, 216, 206);
   height: 1000px;
   width: 100%;
   text-align: center;
@@ -61,7 +61,7 @@ nav span:hover{
   width: 21px;
   height: 27em;
   transform: rotate(31deg);
-  background-color: whitesmoke;
+  background-color: rgb(206, 216, 206);
 }
 
 #breaking-bads {
@@ -72,7 +72,7 @@ nav span:hover{
   text-align: right;
   /* color:#FF0008; */
   font-family: roboto;
-  color: whitesmoke;
+  color: rgb(206, 216, 206);
 }
 
 #building-bonds img, #breaking-bads img {
