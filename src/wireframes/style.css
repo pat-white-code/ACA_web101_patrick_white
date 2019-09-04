@@ -1,3 +1,165 @@
-* {
-  background-color: red;
+*{
+  box-sizing: border-box;
 }
+body {
+  /* background-color: rgb(10, 10, 20); */
+  z-index: 0 auto;
+}
+
+#start {
+  background-color: rgb(10, 10, 20);
+  color: rgb(206, 216, 206);
+  height: 1000px;
+  width: 100%;
+  z-index: auto;
+  text-align: center;
+}
+#start nav {
+  height: 40px;
+  color: rgb(8, 164, 255);
+  font-size: 18px;
+  text-align: right;
+  font-family: roboto;
+}
+
+nav span {
+  margin: 20px;
+  transition: color .5s;
+}
+
+nav span:hover{
+  color: rgb(255, 51, 51);
+}
+
+#start h1 {
+  font-size: 4em;
+  padding: 85px;
+  /* font-family: 'Inknut Antiqua', 'Times New Roman'; */
+}
+
+#logo-holder {
+  width: 85%;
+  margin: 0 auto;
+}
+
+#logo-holder img {
+  width: 75%;
+  margin: 30px;
+}
+
+#logo-holder h2 {
+  font-size: 32px;
+}
+
+#building-bonds{
+  /* border: 1px red solid; */
+  width: 45%;
+  height: 500px;
+  display: inline-block;
+  text-align: left;
+  font-family: roboto;
+}
+
+/* FIXME: MAKE RESPONSIVE TO MOBILE SO DIVIDER BECOMES HORIZONTAL */
+
+#divider {
+  display: inline-block;
+  width: 21px;
+  height: 27em;
+  transform: rotate(31deg);
+  background-color: rgb(206, 216, 206);
+  opacity: .8;
+}
+
+#breaking-bads {
+  /* border: 1px red solid; */
+  width: 45%;
+  height: 500px;
+  display: inline-block;
+  text-align: right;
+  /* color:#FF0008; */
+  font-family: roboto;
+  color: rgb(206, 216, 206);
+}
+
+#building-bonds img, #breaking-bads img {
+  border: 12px red dotted;
+  border-radius: 100%;
+}
+
+#more {
+  height: 50px;
+  display: block;
+  font-family: roboto;
+}
+
+img[src="./images/down-arrow-white.png"]{
+    height: 50px;
+    margin: 41px;
+    opacity: .7;
+  }
+
+#about-me {
+  height: 440px;
+  width: 100%;
+  background-color: rgb(206, 216, 206, 0.4);
+  color: rgb(10, 10, 20);
+  border: 1px red solid;
+  text-align: center;
+  font-family: roboto;
+  display: inline-block;
+}
+
+#about-me h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+#about-me ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+#about-container{
+  margin: 0 auto;
+  width: 70%;
+  height: 250px;
+  border: 1px red solid;
+  position: relative;
+}
+
+.about-div {
+  width: 45%;
+  display: inline-block;
+  border: 1px red solid;
+}
+
+.right {
+  float: right;
+  width: 65%;
+  position: relative;
+  width: 65%;
+  top: 25%;
+  background-color: rgb(255, 51, 51, 0.8)
+}
+
+.left {
+  float: left;
+  width: 34%;
+  background-color: rgb(8, 164, 255, 0.3);
+}
+
+.about-div img {
+  border-radius: 100%;
+  height: 141px;
+  padding: 6px;
+}
+
+#about-me li {
+  list-style: none;
+  padding-inline-start: 0px;
+  font-style: italic;
+}
+
+#about-me img
