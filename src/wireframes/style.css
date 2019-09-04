@@ -206,6 +206,7 @@ img[src="./images/down-arrow-white.png"]{
   height: 32%;
   border: 1px purple solid;
   display: inline-block;
+  position: relative;
 }
 
 .social-icon {
@@ -220,6 +221,16 @@ img[src="./images/down-arrow-white.png"]{
   height: 100%;
   display: inline-block;
   border: 1px black solid;
+  position: absolute;
+}
+
+/* TODO: FIND OUT WHY I HAVE TO USE POSITION ABSOLUTE/RELATIVE AND IF THIS IS SUSTAINABLE */
+
+h3 {
+  font-family: roboto;
+  font-size: 35px;
+  padding: 0px;
+  margin-block-start: 28px;
 }
 
 .experience-container {
@@ -253,6 +264,7 @@ img[src="./images/down-arrow-white.png"]{
   width: 100%;
   border: 1px red solid;
   display: table;
+  position: relative;
 }
 
 /* TODO: FIND OUT MORE ABOUT DISPLAY: TABLE AND WHY INLINE BLOCK DOES NOT DISPLAY PROPERLY */
@@ -262,6 +274,10 @@ img[src="./images/down-arrow-white.png"]{
   width: 30%;
   display: inline-block;
   border: 1px black solid;
+  font-size: 72px;
+  text-align: center;
+  position: absolute;
+  border-radius: 100%;
 }
 
 .job-header {
