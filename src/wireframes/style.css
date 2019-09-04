@@ -178,4 +178,107 @@ img[src="./images/down-arrow-white.png"]{
   font-style: italic;
 }
 
-#about-me img
+.resume {
+  width: 100%;
+  height: 750px;
+  border: 1px red solid;
+}
+
+.resume-header {
+  height: 25%;
+  border: 1px green solid;
+}
+
+.top-row {
+  height: 40%;
+  border: 1px blue solid;
+}
+
+.social-container {
+  width: 30%;
+  height: 100%;
+  border: 1px peru solid;
+  display: inline-block;
+}
+
+.social-row {
+  width: 100%;
+  height: 32%;
+  border: 1px purple solid;
+  display: inline-block;
+}
+
+.social-icon {
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  border: 1px red solid;
+}
+
+.social-text {
+  width: 72%;
+  height: 100%;
+  display: inline-block;
+  border: 1px black solid;
+}
+
+.experience-container {
+  width: 65%;
+  height: 100%;
+  display: inline-block;
+  border: 1px red solid;
+}
+
+.experience-header {
+  width: 100%;
+  height: 30%;
+  border: 1px blue solid;
+}
+
+.job-row {
+  width: 100%;
+  height: 69%;
+  border: 1px orange solid;
+}
+
+.job-container {
+  width: 49%;
+  height: 100%;
+  border: 1px brown solid;
+  display: inline-block;
+}
+
+.job-top-row {
+  height: 45%;
+  width: 100%;
+  border: 1px red solid;
+  display: table;
+}
+
+/* TODO: FIND OUT MORE ABOUT DISPLAY: TABLE AND WHY INLINE BLOCK DOES NOT DISPLAY PROPERLY */
+
+.big-letter {
+  height: 99%;
+  width: 30%;
+  display: inline-block;
+  border: 1px black solid;
+}
+
+.job-header {
+  height: 100%;
+  width: 65%;
+  display: inline-block;
+  border: 1px violet solid;
+}
+
+.job-bottom-row {
+  height:55%;
+  width: 100%;
+  border: 1px blue solid;
+}
+
+.job-description {
+  height: 100%;
+  width: 100%;
+  border: 1px darkcyan solid;
+}
