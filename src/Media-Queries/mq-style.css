@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+}
+
+.article-container {
+  width: 100%;
+  height: 65%;
+  border: 1px green solid;
+  background-color: aliceblue
+}
+
+.footer-container {
+  width: 100%;
+  height: 35%;
+  border: 1px purple solid;
+  background-color: aqua;
+}
+
+img[src="austin.jpg"]{
+  height: 39%;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.article-text-holder {
+  width: 100%;
+  height:50%;
+  background-color: aquamarine;
+  margin-top: 5%;
+}
+
+.article-container {
+  padding: 5%;
+}
+
+.article-container p {
+  font-size: 1.3em
+}
+
+button {
+  width: 46%;
+  font-size: 1.4em;
+  height: 14%;
+  background-color: lightslategray;
+  color: white;
+  float: right;
+}
+
+.footer-links{
+  width: 50%;
+  height:100%;
+  float:left;
+  background-color: beige;
+}
+
+.footer-social {
+  width: 50%;
+  height:100%;
+  float:right;
+  background-color: lightsalmon;
+}
+
+.footer-social, .footer-links {
+  padding: 0 2%;
+  font-family: arial;
+}
