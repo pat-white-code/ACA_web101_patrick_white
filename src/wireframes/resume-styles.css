@@ -1,0 +1,66 @@
+*{
+  box-sizing: border-box;
+}
+
+h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.main-section {
+  width: 100%;
+  height: 1000px;;
+}
+
+.resume {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  height: 25%;
+  padding: 1px 0px 0px 24px;
+  background-color: antiquewhite
+}
+
+.contact-block {
+  display: inline-block;
+  border: 1px red solid;
+}
+
+.greeting-text {
+  height: 150px;
+  border: 1px red solid;
+}
+
+.experience-column{
+  background-color: rgba(0, 0, 255, 0.26);
+  float: left;
+  height:60%;
+  width:70%;
+}
+
+.personal-column {
+  background-color: aqua;
+  float:right;
+  height: 60%;
+  width: 30%;
+}
+
+.job-holder {
+  height: 25%;
+  border: 1px red solid;
+}
+
+.job-dates {
+  float:left;
+  width: 30%;
+  background-color: blueviolet;
+}
+
+.job-info {
+  float: right;
+  width: 70%;
+  background-color: aquamarine;
+}
