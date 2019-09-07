@@ -1,10 +1,31 @@
+:root {
+  --my-white: rgb(233, 236, 240);
+  --my-gray: rgb(42, 46, 55);
+  --my-white-blue: rgb(206, 216, 236);
+  --my-purple-blue: rgb(100,100,210);
+}
+
 *{
   box-sizing: border-box;
+  /* border: 1px red solid; */
 }
 
 h4 {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+.personal-column li {
+  list-style: none;
+}
+
+.personal-column ul {
+  padding-inline-start: 0;
+}
+
+.personal-column h3 {
+  background-color: var(--my-gray);
+  color: var(--my-white);
 }
 
 .main-section {
@@ -21,46 +42,111 @@ h4 {
   width: 100%;
   height: 25%;
   padding: 1px 0px 0px 24px;
-  background-color: antiquewhite
+  background-color: rgb(42, 46, 55);
+  color: rgb(233, 236, 240);
+}
+
+.headshot {
+  border-radius: 50%;
+  float:right;
+  margin-right: 9%;
+  margin-top: 1%;
+  height: 92%;
 }
 
 .contact-block {
   display: inline-block;
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 
 .greeting-text {
   height: 150px;
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 
 .experience-column{
-  background-color: rgba(0, 0, 255, 0.26);
+  /* background-color: rgba(0, 0, 255, 0.26); */
   float: left;
   height:60%;
   width:70%;
 }
 
+.job-holder {
+  height: 25%;
+  /* border: 1px red solid; */
+}
+
+.education-holder {
+  height: 30%;
+}
+
+.certification-holder {
+  height: 5%;
+  /* border: 1px red solid; */
+}
+
+.certification-date {
+  /* border: 1px red solid; */
+}
+
+.job-dates, .education-dates, .certification-date {
+  float:left;
+  width: 30%;
+  /* background-color: blueviolet; */
+}
+
+.job-info, .education-info, .certification-info {
+  float: right;
+  width: 70%;
+  /* background-color: aquamarine; */
+}
+
 .personal-column {
-  background-color: aqua;
+  /* background-color: aqua; */
   float:right;
   height: 60%;
   width: 30%;
+  color: rgb(206, 216, 236);
+  background-color: rgb(100,100,210);
+  padding: 0 2% 0 2%;
 }
 
-.job-holder {
-  height: 25%;
-  border: 1px red solid;
+/* TODO: YOU MAY WANT TO GET RID OF PADDING AND USE PADDING ON INDIVIDUAL SECTIONS. CREATE DIVS AROUND EVERY H3 */
+
+.social {
+  height: 22%;
+  /* background-color: burlywood; */
 }
 
-.job-dates {
-  float:left;
-  width: 30%;
-  background-color: blueviolet;
+.skills {
+  height: 27%;
+  /* background-color: antiquewhite; */
 }
 
-.job-info {
-  float: right;
-  width: 70%;
-  background-color: aquamarine;
+.skill-bar {
+  /* background-color: grey; */
+  width: 75%;
+  height: 12px;  
+}
+
+.skill {
+  /* background-color: blue; */
+  display: inline-block;
+  height: 100%;
+}
+
+#greek {
+  width:85%;
+}
+
+#art {
+  width:70%;
+}
+
+#roman {
+  width: 50%;
+}
+
+h6 {
+  text-align: right;
 }
