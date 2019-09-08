@@ -1,8 +1,8 @@
 :root {
   --my-white: rgb(233, 236, 240);
-  --my-gray: rgb(42, 46, 55);
+  --sidebar-header: rgb(3, 47, 87);
   --my-white-blue: rgb(206, 216, 236);
-  --my-purple-blue: rgb(100,100,210);
+  --sidebar-main: rgb(5, 62, 114);
 }
 
 *{
@@ -10,13 +10,47 @@
   /* border: 1px red solid; */
 }
 
+h3 {
+  margin-block-start: 0;
+  padding: 5px 0px 5px 10px;
+}
+
 h4 {
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
+h5 {
+  margin-block-start: 0.3em;
+  margin-block-end: 0em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+.section-header {
+  background-color: var(--my-gray);
+  height: 28px;
+  color: var(--my-white);
+}
+
+.experience-column .section-header {
+  color: black;
+}
+
+.personal-column {
+  /* background-color: aqua; */
+  float:right;
+  height: 60%;
+  width: 30%;
+  color: rgb(206, 216, 236);
+  background-color: var(--sidebar-main);
+}
+
 .personal-column li {
   list-style: none;
+  padding-left: 10px;
 }
 
 .personal-column ul {
@@ -24,7 +58,7 @@ h4 {
 }
 
 .personal-column h3 {
-  background-color: var(--my-gray);
+  background-color: var(--sidebar-header);
   color: var(--my-white);
 }
 
@@ -87,7 +121,9 @@ h4 {
 
 .job-dates, .education-dates, .certification-date {
   float:left;
+  height:100%;
   width: 30%;
+  text-align: center;
   /* background-color: blueviolet; */
 }
 
@@ -95,16 +131,6 @@ h4 {
   float: right;
   width: 70%;
   /* background-color: aquamarine; */
-}
-
-.personal-column {
-  /* background-color: aqua; */
-  float:right;
-  height: 60%;
-  width: 30%;
-  color: rgb(206, 216, 236);
-  background-color: rgb(100,100,210);
-  padding: 0 2% 0 2%;
 }
 
 /* TODO: YOU MAY WANT TO GET RID OF PADDING AND USE PADDING ON INDIVIDUAL SECTIONS. CREATE DIVS AROUND EVERY H3 */
@@ -116,17 +142,16 @@ h4 {
 
 .skills {
   height: 27%;
-  /* background-color: antiquewhite; */
 }
 
 .skill-bar {
-  /* background-color: grey; */
+  background-color: grey;
   width: 75%;
   height: 12px;  
 }
 
 .skill {
-  /* background-color: blue; */
+  background-color: blue;
   display: inline-block;
   height: 100%;
 }
