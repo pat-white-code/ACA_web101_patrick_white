@@ -16,7 +16,7 @@ h3 {
 }
 
 h4 {
-  margin-block-start: 0;
+  margin-block-start: 15px;
   margin-block-end: 0;
 }
 
@@ -29,14 +29,59 @@ ul {
   padding-inline-start: 20px;
 }
 
+.main-section {
+  width: 100%;
+  height: 1200px;;
+}
+
+.header {
+  width: 100%;
+  height: 25%;
+  padding: 1px 0px 0px 24px;
+  background-color: var(--sidebar-header);
+  color: rgb(233, 236, 240);
+}
+
+.headshot {
+  border-radius: 50%;
+  float:right;
+  margin-right: 9%;
+  margin-top: 1%;
+  height: 92%;
+}
+
+.greeting-text {
+  background-color: var(--my-white);
+  margin-block-start: 0;
+  display: flex;
+  margin: auto;
+  padding: 0 12px 0 12px;
+}
+
+.greeting-text p {
+  margin: auto;
+  text-align: center;
+}
+
 .section-header {
   background-color: var(--my-gray);
   height: 28px;
   color: var(--my-white);
 }
 
+.section-header img {
+  height: 15px;
+  display: inline-block;
+}
+
+.experience-column h3 {
+  display: inline-block;
+}
+
 .experience-column .section-header {
   color: black;
+  border-bottom: 1px gray solid;  
+  height: 35px;
 }
 
 .personal-column {
@@ -62,30 +107,9 @@ ul {
   color: var(--my-white);
 }
 
-.main-section {
-  width: 100%;
-  height: 1000px;;
-}
-
 .resume {
   width: 80%;
   margin: 0 auto;
-}
-
-.header {
-  width: 100%;
-  height: 25%;
-  padding: 1px 0px 0px 24px;
-  background-color: rgb(42, 46, 55);
-  color: rgb(233, 236, 240);
-}
-
-.headshot {
-  border-radius: 50%;
-  float:right;
-  margin-right: 9%;
-  margin-top: 1%;
-  height: 92%;
 }
 
 .contact-block {
@@ -111,20 +135,40 @@ ul {
 }
 
 .education-holder {
-  height: 30%;
+  height: 25%;
 }
 
 .certification-holder {
   height: 5%;
+  display:flex;
+  margin: auto;
   /* border: 1px red solid; */
+}
+
+.dates, .certification-info {
+  margin: auto;
+}
+
+.certification-date {
+  display: flex;
 }
 
 .job-dates, .education-dates, .certification-date {
   float:left;
-  height:100%;
+  height:85%;
   width: 30%;
   text-align: center;
+  margin: auto;
   /* background-color: blueviolet; */
+}
+
+.job-dates, .education-dates {
+  display: flex;
+  margin: auto; 
+}
+
+.dates {
+  margin: auto;
 }
 
 .job-info, .education-info, .certification-info {
@@ -140,18 +184,28 @@ ul {
   /* background-color: burlywood; */
 }
 
+.skill-container {
+  padding: 0px 0px 0px 12px;
+}
+
+.skill-container h6 {
+  margin-block-start: 10px;
+  margin-block-end: 0;
+  padding-right: 42px;
+}
+
 .skills {
   height: 27%;
 }
 
 .skill-bar {
-  background-color: grey;
+  background-color: var(--my-white);
   width: 75%;
   height: 12px;  
 }
 
 .skill {
-  background-color: blue;
+  background-color: var(--sidebar-header);
   display: inline-block;
   height: 100%;
 }
@@ -170,4 +224,10 @@ ul {
 
 h6 {
   text-align: right;
+}
+
+.certifications .section-header {
+  display: block;
+  margin: 0;
+  text-align: left;
 }
