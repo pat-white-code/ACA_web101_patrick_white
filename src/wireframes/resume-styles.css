@@ -85,10 +85,6 @@ h4 {
   /* border: 1px red solid; */
 }
 
-.certification-date {
-  /* border: 1px red solid; */
-}
-
 .job-dates, .education-dates, .certification-date {
   float:left;
   width: 30%;
