@@ -7,7 +7,12 @@
 
 *{
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
   /* border: 1px red solid; */
+}
+
+body {
+  background-color: var(--my-white  )
 }
 
 h3 {
@@ -51,7 +56,7 @@ ul {
 }
 
 .greeting-text {
-  background-color: var(--my-white);
+  background-color:  white;
   margin-block-start: 0;
   display: flex;
   margin: auto;
@@ -155,7 +160,7 @@ ul {
 
 .job-dates, .education-dates, .certification-date {
   float:left;
-  height:85%;
+  height:75%;
   width: 30%;
   text-align: center;
   margin: auto;
