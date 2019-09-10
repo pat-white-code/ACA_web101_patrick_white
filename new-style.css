@@ -1,0 +1,75 @@
+body {
+  background-color: black;
+
+}
+.main-grid {
+  width: 100%;
+  background-color:grey;
+  display: grid;
+  grid-template-rows: repeat(6, 600px);
+  grid-row-gap: 20px;
+  grid-template-areas:
+    "hero-landing"
+    "nav-page"
+    "about-me"
+    "blog"
+    "project"
+    "contact"
+}
+
+.hero-landing {
+    background-color: aqua;
+    grid-area: hero-landing;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.hero-landing p {
+  font-size: 2em;
+  padding: 20px;
+}
+
+.about-me {
+  background-color: aqua;
+  grid-area: about-me;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 30% 30% 30%;
+}
+.about-me .header {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-me div {
+  border:1px solid red;
+}
+
+.nav-page {
+  grid-area: nav-page;
+  background-color: beige;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.nav-item {
+  border:1px red solid;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.blog {
+  grid-area: blog;
+  background-color: blueviolet;
+}
+
+.project {
+  grid-area: project;
+  background-color: brown;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: burlywood;
+}
