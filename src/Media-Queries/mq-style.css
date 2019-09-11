@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(226, 226, 226);
+}
+
+h1 {
+  margin-block-end: 0em;
+}
+
+.main-container {
+  width: 375px;
+  height: 812px;
+  margin: 0 auto;
+}
+
+.article-container {
+  width: 100%;
+  height: 65%;
+  /* border: 1px green solid; */
+  /* background-color: aliceblue; */
+}
+
+img[src="austin.jpg"]{
+  height: 39%;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.article-text-holder {
+  width: 100%;
+  height:50%;
+  /* background-color: aquamarine; */
+  margin-top: 5%;
+}
+
+.text-holder {
+  /* background-color: azure; */
+  width: 100%;
+  height: 55%;
+  overflow: hidden;
+}
+
+
+.article-container {
+  padding: 5%;
+  background-color: rgb(226, 226, 226)
+}
+
+.article-container p {
+  font-size: 1.3em
+}
+
+button {
+  width: 46%;
+  font-size: 1.4em;
+  height: 14%;
+  background-color: darkslategrey;
+  color: white;
+  float: right;
+  margin: 5%;
+}
+
+.top-stories-container {
+  display:none;
+}
+
+.footer-container {
+  width: 100%;
+  height: 35%;
+  /* border: 1px purple solid; */
+  /* background-color: aqua; */
+}
+
+.footer-links{
+  width: 50%;
+  height:100%;
+  float:left;
+}
+
+.footer-social {
+  width: 50%;
+  height:100%;
+  float:right;
+}
+
+.footer-social, .footer-links {
+  padding: 0 2%;
+  font-family: arial;
+  background-color: darkslategrey;
+  padding: 0px 10%;
+  color: rgb(226,226,226);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.footer-container li {
+  border-bottom: 1px rgb(226, 226, 226) solid;
+  margin: 0.3em 0 0 0;
+  padding: 0 0 0.2em 0em;
+}
+
+footer h2 {
+  font-size: 1.4em;
+}
+
+li img {
+  height: 15px;
+  float: right;
+}
+
+/* Medium and up (Tablets) */
+@media (min-width: 768px) {
+  .main-container {
+    width: 100%;
+    height: 100%;
+  }
+  .article-container {
+    height: 100%;
+    padding: 10%;
+  }
+
+  .footer-container {
+    display:none;
+  }
+
+
+}
+
+/* Large and up (Desktops) */
+@media (min-width: 992px) {
+  
+  .main-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .article-container {
+    height: 100%;
+    width: 75%;
+    padding: 5%;
+    float: left;
+  }
+
+  .top-stories-container {
+    width: 25%;
+    height: 100%;
+    background-color: darkslategrey;
+    float: right;
+    display: block;
+    color: rgb(226,226,226);
+    font-family: arial;
+    padding: 3% 0px 0px 3%;
+  }
+
+  .top-stories-container li {
+    margin: 5% 5% 0 0;
+  }
+
+  .top-stories-container h2 {
+    border-bottom: 1px rgb(226, 226, 226) solid;
+    padding: 0px 0px 5% 0px;
+    margin-right: 10%;
+  }
+
+  .footer-container {
+    display:none;
+
+}
+}
