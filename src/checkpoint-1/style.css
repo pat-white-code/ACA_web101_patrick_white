@@ -47,7 +47,7 @@ body {
   flex-direction: column;
   height:110%;
   align-items: center;
-  overflow: visible;
+  /* overflow: visible; */
 }
 
 .widget {
@@ -59,9 +59,9 @@ body {
   margin-top: 10px;
 }
 
-.widget img{
+/* .widget img{
   height: 100%;
-}
+} */
 
 .calendar {
   height: 350px;
