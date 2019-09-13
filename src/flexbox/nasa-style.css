@@ -39,7 +39,7 @@ body{
 .info-container {
   background-color: rgb(230, 230,230);
   width: 100%;
-  height: 40%;
+  height: 350px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -47,20 +47,27 @@ body{
 }
 
 .info-card {
+  border: 1px red solid;
   width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
   padding-left: 20px;
-  /* align-items: center; */
+  overflow: hidden;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 380px) {
   .info-container {
     flex-direction: column;
+    height: 350px;
+    width: 100%;
+    align-items: center;
   }
 
   .info-card {
     flex-direction: row;
+    width:80%;
+    height:30%;
   }
+
 }
