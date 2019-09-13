@@ -132,8 +132,43 @@ body {
   }
 }
 
-
-
-
-
 /* Desktop View */
+
+@media(min-width: 992px) {
+  /* REFORMS GRID LAYOUT TO CREATE ASIDE BAR */
+  .grid-container {
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 5% 5% 1fr;
+    grid-template-areas: 
+      "header-1 header-1 header-2"
+      "aside nav nav"
+      "aside dash dash"
+  }
+  .aside {
+    background-color:green;
+    grid-area: aside;
+  }
+
+  .top-dash .widget {
+    width: 20%;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .middle-dash {
+    flex-direction: row;
+  }
+
+  .bottom-dash {
+    width:100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .bottom-dash .widget {
+    width: 359px;
+    height: 402px;
+    overflow: hidden;
+  }
+}
