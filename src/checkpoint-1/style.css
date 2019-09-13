@@ -1,5 +1,14 @@
 /* Mobile First see media queries for Tablet and Desktop */
 
+
+/* VARIABLES FOR COLOR GRADIANTS */
+:root {
+  --green-radiant: linear-gradient(to top, #2ec0ab, #2fc4ae, #30c8b2, #31ccb5, #32d0b9);
+  --gray-gradiant: linear-gradient(to top, #618395, #668699, #6b8a9d, #708da1, #7591a5);
+  --red-gradiant: linear-gradient(to top, #e46e6f, #e57273, #e67778, #e67b7c, #e77f80);
+  --blue-gradiant: background-image: linear-gradient(to top, #1fc2d0, #20c7d5, #22cbda, #23d0df, #24d5e4);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,6 +17,17 @@ body {
   margin: 0;
   padding: 0;
   background-color: gray;
+}
+
+h2 {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+p {
+  line-height: 1.4em;
+  margin-block-start: 0.5em;
+  margin-block-end: 0;
 }
 
 .grid-container {
@@ -46,22 +66,85 @@ body {
   display: flex;
   flex-direction: column;
   height:110%;
-  align-items: center;
+  justify-content: space-around;
   /* overflow: visible; */
 }
 
 .widget {
-  display: flex;
-  height: 180px;
-  width: 100%;
-  border: 1px red solid;
+  display: grid;
+  grid-template-columns: 30% 1fr 1fr;
+  grid-template-rows: 70% 1fr;
+  height: 200px;
+  width: 90%;
   justify-content: center;
   margin-top: 10px;
 }
 
-/* .widget img{
-  height: 100%;
-} */
+.box-1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-image: var(--green-radiant);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-1 img {
+  opacity: 0.8;
+  height: 30px;
+}
+
+.box-2 {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  flex-direction: column;
+  background-color: rgb(255,255,255);
+  color: rgb(162,167,178);
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+}
+
+.box-3 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-image: var(--green-radiant);
+}
+
+.box-4 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-image: var(--gray-gradiant);
+}
+
+.box-5 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  background-image: var(--red-gradiant);
+}
+
+/* SYMBOLS INSIDE WIDGET BOXES */
+.box-3, .box-4, .box-5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:3em;
+  color: rgba(255, 255, 255, 0.603);
+}
+
+
+/* INDIVIDUAL WIDGET STYLING  */
+
+.programming .box-1 {
+  background-image: var(--gray-gradiant);
+}
+
+.orders .box-1 {
+  background-image: var(--red-gradiant);
+}
+
+.web-design .box-1 {
+  background-image: linear-gradient(to top, #1fc2d0, #20c7d5, #22cbda, #23d0df, #24d5e4);
+}
 
 .calendar {
   height: 350px;
