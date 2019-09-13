@@ -1,0 +1,92 @@
+/* Mobile First see media queries for Tablet and Desktop */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+}
+
+.grid-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5% 5% 90%;
+  grid-template-areas: 
+    "header-1 header-2"
+    "nav nav"
+    "dash dash"
+}
+
+.header-1 {
+  grid-area: header-1;
+  background-color: aquamarine;
+  display: flex;
+}
+
+.header-2 {
+  grid-area: header-2;
+  background-color: beige;
+  display: flex;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: blue;
+  display: flex;
+}
+
+.dash {
+  grid-area: dash;
+  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  height:110%;
+  align-items: center;
+  overflow: visible;
+}
+
+.widget {
+  display: flex;
+  height: 180px;
+  width: 100%;
+  border: 1px red solid;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.widget img{
+  height: 100%;
+}
+
+.calendar {
+  height: 350px;
+}
+
+.stats {
+  height: 400px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet View */
+
+
+
+
+
+
+
+/* Desktop View */
