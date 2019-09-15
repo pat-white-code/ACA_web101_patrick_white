@@ -7,7 +7,7 @@
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <!-- CSS HERE -->
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./refactored-style.css">
   <title>Responsive Dashboard</title>
 </head>
 <body>
@@ -29,9 +29,9 @@
             <h2>SEO</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
-          <div class="box-3"><</div>
-          <div class="box-4">+</div>
-          <div class="box-5">></div>
+          <div class="box-3 flex-row center"><</div>
+          <div class="box-4 flex-row center">+</div>
+          <div class="box-5 flex-row center">></div>
         </div>
         <div class="widget programming">
           <div class="box-1"><img src="./img/code-brackets.png" /></div>
@@ -39,17 +39,17 @@
               <h2>PROGRAMMING</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
-          <div class="box-3"><</div>
-          <div class="box-4">+</div>
-          <div class="box-5">></div>
+          <div class="box-3 flex-row center"><</div>
+          <div class="box-4 flex-row center">+</div>
+          <div class="box-5 flex-row center">></div>
         </div>
         <div class="widget orders">
           <div class="box-1"><img src="img/cart.png" /></div>
           <div class="box-2"><h2>ORDERS</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></div>
-          <div class="box-3"><</div>
-          <div class="box-4">+</div>
-          <div class="box-5">></div>
+          <div class="box-3 flex-row center"><</div>
+          <div class="box-4 flex-row center">+</div>
+          <div class="box-5 flex-row center">></div>
         </div>
         <div class="widget web-design">
           <div class="box-1"><img src="img/desktop.png" /></div>
@@ -57,9 +57,9 @@
               <h2>WEB DESIGN</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
-          <div class="box-3"><</div>
-          <div class="box-4">+</div>
-          <div class="box-5">></div>
+          <div class="box-3 flex-row center"><</div>
+          <div class="box-4 flex-row center">+</div>
+          <div class="box-5 flex-row center">></div>
         </div>
       </section>
       <section class="middle-dash flex-col">
@@ -76,7 +76,7 @@
 
         <!-- WORLD CLOCK WIDGET -->
         <div class="widget world-clock">
-          <div class="clock-top">
+          <div class="clock-top flex-row center">
             <h1>World Clock</h1>
           </div>
           <div class="clock-bottom flex-col">
@@ -245,19 +245,52 @@
                 <p>11:00 AM</p>
               </div>
             </div>
+            <div class="clock-item">
+              <div class="local-city">
+                <p>Cupertino</p>
+              </div>
+              <div class="local-weather">
+                <p>^</p>
+              </div>
+              <div class="local-time">
+                <p>11:00 AM</p>
+              </div>
+            </div>
+            <div class="clock-item">
+              <div class="local-city">
+                <p>Cupertino</p>
+              </div>
+              <div class="local-weather">
+                <p>^</p>
+              </div>
+              <div class="local-time">
+                <p>11:00 AM</p>
+              </div>
+            </div>
+            <div class="clock-item">
+              <div class="local-city">
+                <p>Cupertino</p>
+              </div>
+              <div class="local-weather">
+                <p>^</p>
+              </div>
+              <div class="local-time">
+                <p>11:00 AM</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="weather">
-          <div class="weather-top">
+        <div class="weather widget flex-col">
+          <div class="weather-top flex-col">
             <div class="temp flex-col center">
               95
             </div>
-            <div class="weather-city flex center">
+            <div class="weather-city flex-row center">
               <h2>Austin</h2>
               <h6>clear</h6>
             </div>
           </div>
-          <div class="weather-bottom">
+          <div class="weather-bottom flex-row center">
             <div class="weather-item">
               <p>Now</p>
               <p>*</p>
