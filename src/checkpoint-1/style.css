@@ -75,12 +75,29 @@ p {
   grid-area: header-1;
   background-image: var(--lightgray-gradiant);
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'roboto', sans-serif;  
+  font-size: 1.4em;
+}
+
+.header-1 img {
+  height: 50%;
+  justify-content: flex-start;
 }
 
 .header-2 {
   grid-area: header-2;
   background-image: var(--lightgray-gradiant);
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.header-2 img {
+  height: 50%;
+  padding-right: 20px;
 }
 
 .nav {
@@ -388,11 +405,20 @@ clock-item:nth-of-type(2) {
   /* REFORMS GRID LAYOUT TO CREATE ASIDE BAR */
   .grid-container {
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 2.3% 5% 1fr;
+    grid-template-rows: 4% 5% 1fr;
     grid-template-areas: 
       "header-1 header-1 header-2"
       "aside nav nav"
       "aside dash dash"
+  }
+
+  .header-1 {
+    justify-content: flex-start;
+    padding-left: 30px;
+  }
+
+  .header-1 p {
+    margin-left: 20px;
   }
 
   .aside {
