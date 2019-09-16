@@ -507,7 +507,7 @@ clock-item:nth-of-type(2) {
 @media(min-width: 992px) {
   /* REFORMS GRID LAYOUT TO CREATE ASIDE BAR */
   .grid-container {
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 20% 50% 30%;
     grid-template-rows: 4% 7% 1fr;
     grid-template-areas: 
       "header-1 header-1 header-2"
