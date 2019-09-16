@@ -47,7 +47,7 @@ body{
 }
 
 .info-card {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   width: 30%;
   height: 100%;
   display: flex;
