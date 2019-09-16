@@ -416,6 +416,37 @@ clock-item:nth-of-type(2) {
   .grid-container {
     grid-template-rows: 2% 6% 90%;  
   }
+
+  .nav {
+    grid-area: nav;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .nav-header {
+    width: 30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .nav-header h5 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  
+  .nav-set {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-set img {
+    height: 70px;
+  }
+
   .top-dash {
     display: flex;
     flex-flow: row wrap;
@@ -531,7 +562,7 @@ clock-item:nth-of-type(2) {
     justify-self: end;
   }
 
-  .nav {
+  /* .nav {
     grid-area: nav;
     background-color: white;
     display: flex;
@@ -559,7 +590,7 @@ clock-item:nth-of-type(2) {
   
   .nav-set img {
     height: 70px;
-  }
+  } */
 
   .top-dash .widget {
     width: 20%;
