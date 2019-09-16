@@ -64,7 +64,7 @@ p {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2% 5% 90%;
+  grid-template-rows: 2% 4% 90%;
   grid-template-areas: 
     "header-1 header-2"
     "nav nav"
@@ -166,6 +166,16 @@ p {
   margin-top: 10px;
   overflow: hidden;
 }
+
+.app {
+  display: flex;
+  height: 200px;
+  width: 90%;
+  background-color: #30c8b2;
+  margin-top: 20px;
+}
+
+
 
 /* CREATES WIDGET BOXES */
 .box-1 {
@@ -346,6 +356,9 @@ clock-item:nth-of-type(2) {
     width: 100%;
   }
 
+  .grid-container {
+    grid-template-rows: 2% 6% 90%;  
+  }
   .top-dash {
     display: flex;
     flex-flow: row wrap;
@@ -367,7 +380,7 @@ clock-item:nth-of-type(2) {
     overflow: hidden;
   }
 
-  .middle-dash {
+  .middle-dash .widget {
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -383,20 +396,22 @@ clock-item:nth-of-type(2) {
 
   .bottom-dash {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
-  .bottom-dash .widget {
+  .weather, .world-clock {
     height: 500px;
+    width: 40%;
   }
 
   .bottom-dash .stats {
     height: 650px;
   }
   
-  section{
+  /* section{
     margin-top: 40px;
-  }
+  } */
 }
 
 /* Desktop View */
@@ -405,7 +420,7 @@ clock-item:nth-of-type(2) {
   /* REFORMS GRID LAYOUT TO CREATE ASIDE BAR */
   .grid-container {
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 4% 5% 1fr;
+    grid-template-rows: 4% 7% 1fr;
     grid-template-areas: 
       "header-1 header-1 header-2"
       "aside nav nav"
@@ -429,6 +444,7 @@ clock-item:nth-of-type(2) {
     flex-direction: column;
     justify-content: start;
     color: rgb(24,29,38);
+    height: 110%;
   }
 
   .aside-welcome {
@@ -489,19 +505,42 @@ clock-item:nth-of-type(2) {
 
   .top-dash .widget {
     width: 20%;
-    height: 250px;
+    height: 170px;
     overflow: hidden;
+  }
+
+  .top-dash p {
+    font-size: 0.6em;
+  }
+
+  .top-dash h2 {
+    font-size: 1em;
+  }
+
+  .top-dash .box-2 {
+    padding: 8px;
   }
 
   .middle-dash {
     flex-direction: row;
   }
 
-  .bottom-dash {
-    width:100%;
+  .app {
+    margin: 0 20px;
+  }
+
+/* I THINK THE BELOW CODE IS USELESS */
+
+  .bottom-dash .widget {
+    width:90%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+  .bottom-dash {
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
   .weather {
