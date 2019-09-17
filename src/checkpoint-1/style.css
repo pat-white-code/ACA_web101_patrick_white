@@ -312,18 +312,37 @@ ul {
   font-size: 1.5em;
   font-family: 'roboto', sans-serif;
   border-bottom: 2px rgb(233, 236, 241) solid;
-  padding: 5px 20px;
+  padding: 5px 12px;
 }
 
+.local-city {
+  display: flex;
+  width: 44%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.local-city p {
+  font-size: .8em;
+  margin-block-start: 0;
+}
+
+.local-time {
+  display: flex;
+  width: 30%;
+  align-items: center;
+
+}
 .local-weather {
   display:flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width:35%
+  width:22%;
 }
 
 .clock-item img {
-  width: 25%;
+  width: 48%;
+  height: 88%;
 }
 
 /* TODO: make it so that the clock items alternate colors. */
