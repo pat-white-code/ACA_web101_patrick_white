@@ -315,6 +315,17 @@ ul {
   padding: 5px 20px;
 }
 
+.local-weather {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:35%
+}
+
+.clock-item img {
+  width: 25%;
+}
+
 /* TODO: make it so that the clock items alternate colors. */
 
 clock-item:nth-of-type(2) {
