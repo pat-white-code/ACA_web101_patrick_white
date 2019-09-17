@@ -388,12 +388,16 @@ clock-item:nth-of-type(2) {
   box-shadow: grey 3px 3px 9px;
   background-color: lightcyan;
   font-family: 'roboto';
-  font-size: 2em;
+  font-size: 1.8em;
   padding: 7px;
 }
 
 .weather-item p {
   margin-block-start: 0em;
+}
+
+.weather-item img {
+  height: 25%;
 }
 
 .weather-city {
