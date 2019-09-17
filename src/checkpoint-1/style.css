@@ -341,10 +341,11 @@ clock-item:nth-of-type(2) {
   margin: 20px;
   height: 500px;
   width: 90%;
-  background-color: #618395;
+  background-color: aliceblue;
   display: flex;
   flex-direction: column;
   color: white;
+  align-items: center;
 }
 
 .weather-top {
@@ -365,7 +366,7 @@ clock-item:nth-of-type(2) {
 }
 
 .weather-bottom {
-  width:100%;
+  width: 94%;
   height:40%;
   background-color: aliceblue;
   display: flex;
