@@ -233,7 +233,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size:3em;
+  font-size: 1.8em;
   color: rgba(255, 255, 255, 0.603);
 }
 
@@ -327,12 +327,6 @@ ul {
   margin-block-start: 0;
 }
 
-.local-time {
-  display: flex;
-  width: 30%;
-  align-items: center;
-
-}
 .local-weather {
   display:flex;
   justify-content: flex-start;
@@ -342,7 +336,12 @@ ul {
 
 .clock-item img {
   width: 48%;
-  height: 88%;
+}
+
+.local-time {
+  display: flex;
+  width: 30%;
+  align-items: center;
 }
 
 /* TODO: make it so that the clock items alternate colors. */
@@ -532,6 +531,10 @@ clock-item:nth-of-type(2) {
   .bottom-dash .stats {
     height: 650px;
   }
+
+  .local-time p {
+    font-size: .8em;
+  }
   
   /* section{
     margin-top: 40px;
@@ -588,6 +591,7 @@ clock-item:nth-of-type(2) {
 
   .aside-button:hover {
     background-color: rgb(241, 243, 246);
+    cursor: pointer;
   }
 
   .aside .active {
