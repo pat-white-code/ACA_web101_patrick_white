@@ -346,6 +346,7 @@ clock-item:nth-of-type(2) {
   flex-direction: column;
   color: white;
   align-items: center;
+  box-shadow: gray 3px 3px 9px;
 }
 
 .weather-top {
