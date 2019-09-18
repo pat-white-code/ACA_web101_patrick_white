@@ -1,0 +1,109 @@
+/* Mobile first */
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  height: 1882px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 13% 25% 52% 10%;
+  grid-template-areas: 
+    "nav"
+    "header"
+    "haircuts"
+    "footer"
+}
+
+.nav {
+  background-color: lightblue;
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: white;
+}
+
+.logo {
+  height: auto;
+}
+
+.mobile-menu {
+  height: auto;
+}
+
+.header {
+  background: lightcoral;
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://freewebsitetemplates.com/preview/mustacheenthusiast/images/the-beacon.jpg');
+  background-size: 261%;
+  padding: 10px;
+}
+
+.header h3 {
+  background-color: white;
+  font-family: 'Poller One';
+  font-size: 1em;
+  padding: 5px;
+}
+
+.header p {
+  color: white;
+  background-color: rgb(40,40,40);
+  padding: 5px 14px;
+  display: inline-block;
+  width: 96%;
+}
+
+.button {
+  background-color: lightseagreen;
+  width: 98px;
+  padding: 7px;
+  color: white;
+}
+
+.haircuts {
+  grid-area: haircuts;
+  background: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(40, 40, 40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  width: 100%;
+  height: 10%;
+  margin-block-start: 0;
+  margin-block-end:  0;
+}
+
+.social-holder {
+  display: flex;
+  width: 60%;
+  height: 40%;
+  align-items: center;
+  justify-content: space-around;
+}
+
