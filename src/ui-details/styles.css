@@ -491,3 +491,65 @@ section {
 .cancel:hover {
   background: #ddd;
 }
+
+/* body-text */
+
+.body-text-container {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  width: 90%;
+  padding: 2rem;
+  background: #f1f1f1;
+}
+
+.body-text-container p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-block-start: 0;
+  color: #444;
+}
+
+/* positive-bold */
+
+.positive-bold-container {
+    display: flex;
+    background-color: #f1f1f1;
+    width: 90%;
+    height: 120px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* FIXME: WHY DO I NEED HEIGHT MAX CONTENT FOR THIS BUTTON */
+
+  .positive-bold-container button {
+    border: none;
+    padding: .875rem 2rem;
+    border-radius: 5px;
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    height: max-content;
+  }
+
+  .positive-bold-container .cancel {
+    background: transparent;
+    color: #888;
+  }
+
+  .positive-bold-container .cancel:hover {
+    background: #ddd;
+    color: #666;
+  }
+
+  .positive-bold-container .update {
+    background: hsl(200, 71%, 46%);
+    color: #fff;
+  }
+
+  .positive-bold-container .update:hover {
+    background: hsl(200, 71%, 40%);
+  }
