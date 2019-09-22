@@ -4,6 +4,8 @@
 
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .spacer {
@@ -186,4 +188,93 @@ button:focus {
 
 button:active {
     transform: scale(0.99);
+}
+
+/* BEGIN TEXT ALIGNMENT */
+
+.text-alignment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.ui-description {
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ui-description h1 {
+  text-align: center;
+}
+
+.text-alignment-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  background-color: aliceblue;
+}
+
+.alignment-card {
+  display: flex;
+  width:45%;
+  /* background-color: #B77cFF; */
+  height: 150px;
+  margin: 13px;
+  justify-content: space-between;
+}
+
+.image-container {
+  display: flex;
+  width:20%;
+  height:100%;
+  justify-content: center;
+  /* border: 1px red solid; */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 100%;
+  /* border: 1px red solid; */
+}
+
+.text-alignment-icon {
+  height:32px;
+  margin-top: 5px;
+}
+
+.text-container h3, .text-container p {
+  margin-block-start: 10px;
+  margin-block-end: 0px;
+  font-family: arial;
+}
+
+.text-container h3 {
+  color: rgb(183, 124, 255)
+}
+
+.grey-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grey-text-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  background-color: #568695;
+  height: 250px;
+  padding: 20px;
+}
+
+.grey-text-container h3{
+  color: white;
+}
+
+.grey-text-container p {
+  color: rgba(256, 256, 256, 0.7)
 }

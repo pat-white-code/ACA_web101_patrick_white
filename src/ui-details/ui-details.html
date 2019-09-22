@@ -52,6 +52,77 @@
       </div>
     </section>
     <div class="spacer"></div>
+    <section class="text-alignment">
+      <div class="ui-description">
+        <h1>Text Alignment</h1>
+        <p>The goal of this detail is to make text aligned properly with it's corresponding logo. We have a section container called text-alignment, which is flex, width 100% and justify content center. Within this section we have text-alignment-container, which is a div with flex, flex-wrap, width 80% and a background color of Aliceblue.</p>
+
+        <p>Text-alignmnet-container has four divs called .alignment-card, which has display of flex, width 45%, hieght 150px, margin of 13px and justify content of space-between, which creates space between the image and text.</p>
+
+        <p>Within each .alignment-card we have two divs, .text-container and .image-container. image-container has display flex, width 20%, height 100%, and justify contnent center. Text-container is flex-column, width 75%, height 100%.</p>
+
+        <p>Inside each .image-container is an image with class .text-alignment-icon, which has a hieght of 32px and margin-top of 10px. all of the images have a color of #B77CFF</p>
+
+        <p>Inside each .text container, we have an h3 and p element. Both of these elements have margin-block-start/end at 10px/0px. H3 is styled with the same color as the logos, which is rbg(183, 124, 255).</p>
+      </div>
+      <div class="text-alignment-container">
+        <div class="alignment-card">
+          <div class="image-container">
+            <img class="text-alignment-icon" src="img/settings-gears.png" />
+          </div>
+          <div class="text-container">
+            <h3>Database</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem vitae omnis est facilis.</p>
+          </div>
+        </div>
+        <div class="alignment-card">
+          <div class="image-container">
+            <img class="text-alignment-icon" src="./img/database.png" />
+          </div>
+          <div class="text-container">
+            <h3>Servers</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem vitae omnis est facilis.</p>
+          </div>
+        </div>
+        <div class="alignment-card">
+          <div class="image-container">
+            <img class="text-alignment-icon" src="./img/padlock.png" />
+          </div>
+          <div class="text-container">
+            <h3>Privacy</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem vitae omnis est facilis.</p>
+          </div>
+        </div>
+        <div class="alignment-card">
+          <div class="image-container">
+            <img class="text-alignment-icon" src="./img/shield.png" />
+          </div>
+          <div class="text-container">
+            <h3>Security</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem vitae omnis est facilis.</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="ui-description">
+        <p>In the author's original code, all of the elements are held in a div with classes "example ex-6". ex-6 declares flex and flex-wrap, whike example declares margin-top of 1.5rem.</p>
+
+        <p>Instead of alignment-card, the other has a div with class "col" to hold each individual item.
+        </p>
+
+        <p>Each "col" has two divs, an icon-col and a text-col. Neither of these div classes have declared style properties in the css, so it is unclear how they are formatted correctly. </p>
+        <p>It is worth noting that in the author's version, there is a css declaration of .col:nth-of-child(2n -1){margin-right: 1.5 rem}. This makes it so that 1st and 3rd items have a right margin.</p>
+        <p>Also, the author does not have an image source where the images appear on the page. In its place, there is an 'i' tag with classes "fa fa-gear". class fa-gear has a ::before pseudo element with a content property of string "\f013". It is worth researching how i tags work, and how and why a string can be linked to source content, or how that string may be a variable to a url.</p>
+      </div>
+    </section>
+    <div class="spacer"></div>
+    <section class="grey-text">
+      <div class="grey-text-container">
+        <h3>Discover more</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa incidunt adipisci sed cum natus asperiores eius expedita dolorum aliquam quibusdam, at iusto, quos quis consequuntur porro quas? Itaque, ipsam quas!</p>
+      </div>
+    </section>
+    <div class="spacer"></div>
   </div>
   <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/geotatah" title="geotatah">geotatah</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div> -->
 </body>
