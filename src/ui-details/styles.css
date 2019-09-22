@@ -344,18 +344,53 @@ section {
 
 /* GRADIANT BORDER */
 
-.gradient-border {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 200px;
-}
+
 
 .gradiant-holder {
-  background-color: aliceblue;
-  width: 80%;
-  height: 200px;
-  display: block;
-  border:1px red solid;
+  background-color: #f1f1f1;
+  width: 90%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.gradiant-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 270px;
+  width: 80%;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #04b3ba, #00b6b6, #00b9b0, #00bcaa, #0abea2);
+  overflow: hidden;
+
+}
+
+.gradiant-card {
+  width: 100%;
+  height:95%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;  
+}
+
+.gradiant-button {
+  background: linear-gradient(to right, hsl(182, 96%, 37%) 0%,hsl(171, 90%, 39%) 100%);
+  color: #fff;
+  font-weight: 500;
+  padding: .5rem 2rem;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  text-shadow: 0 1px 2px rgba(0,0,0,.2);
+  cursor: pointer;
+}
+
+.gradiant-button:hover {
+  background: linear-gradient(to right, hsl(182, 96%, 33%) 0%,hsl(171, 90%, 35%) 100%);
+}
+
