@@ -394,3 +394,100 @@ section {
   background: linear-gradient(to right, hsl(182, 96%, 33%) 0%,hsl(171, 90%, 35%) 100%);
 }
 
+/* BEGIN CONTRAST */
+
+.contrast-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  width: 90%;
+  height:500px;
+}
+
+.contrast-card {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px red solid; */
+  height: 350px;
+  width: 80%;
+  box-shadow: 0 3px 4px #AAA;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-header {
+  /* border: 1px red solid; */
+  display: flex;
+  height: 20%;
+  width: 100%;
+  align-content: center;
+  background-color: white;
+}
+
+.card-body {
+  /* border: 1px blue solid; */
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+}
+
+.contrast-container p {
+  display: inline;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* FIXME: Why does this p element fill auto-fill the hieght? */
+.card-header p {
+  align-self: center;
+  margin-left: 20px;
+  font-size: 1.2em;
+}
+
+.card-body p {
+  line-height: 1.8em;
+  color:#666;
+}
+
+.button-container {
+  width: 100%;
+  height: 20%;
+  /* border: 1px red solid; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contrast-button {
+  border: none;
+  padding: .375rem 1.75rem;
+  border-radius: 5px;
+  font-size: .875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.button-container .delete {
+  color: #fff;
+  background: hsl(5, 53%, 60%);
+}
+
+.delete:hover {
+  background: hsl(5, 40%, 48%);
+}
+
+.button-container .cancel {
+  color: #444;
+    background: transparent;
+    margin-left: .5rem;
+}
+
+.cancel:hover {
+  background: #ddd;
+}
