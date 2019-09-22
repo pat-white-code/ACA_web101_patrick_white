@@ -151,7 +151,7 @@
   background-color: rgb(240, 240, 240);
 }
 
-button {
+.shift-button-container button {
     display: inline-block;
     border: none;
     padding: 1rem 2rem;
@@ -173,20 +173,20 @@ button {
     box-shadow: 0px 1px 3px rgb(130,130,130);
 }
 
-button:hover,
-button:focus {
+.shift-button-container button:hover,
+.shift-button-container button:focus {
     background: #0053ba;
     position:relative;
     bottom: 4px;
     box-shadow: 2px 4px 4px rgb(180, 180, 180)
 }
 
-button:focus {
+.shift-button-container button:focus {
     outline: 1px solid #fff;
     outline-offset: -4px;
 }
 
-button:active {
+.shift-button-container button:active {
     transform: scale(0.99);
 }
 
@@ -277,4 +277,85 @@ button:active {
 
 .grey-text-container p {
   color: rgba(256, 256, 256, 0.7)
+}
+
+.grey-text-container input {
+  height: 2.25rem;
+  padding: 0 .75rem;
+  border: 0;
+  font-size: .875rem;
+  width: 15rem;
+  border-radius: 5px 0 0 5px;
+}
+
+.grey-text-container input::placeholder {
+  color: rgba(0,0,0,.3);
+  text-transform: capitalize;
+}
+
+.grey-text-container button {
+  background: hsl(43, 62%, 72%);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  height: 2.25rem;
+  margin-left: -.25rem;
+  padding: 0 1rem;
+  color: rgba(0,0,0,0.7);
+  font-weight: bold;
+  cursor: pointer;
+  width: 100px;
+}
+
+.grey-text-container button:hover {
+  background: hsl(43, 50%, 65%)
+}
+
+
+/* BULLET ICON */
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.bullet-icon .flex-container {
+  background-color: aliceblue;
+  width: 80%;
+  padding: 20px;
+}
+
+.bullet-icon ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bullet-item {
+  display: inline-block;
+  width: 45%;
+  margin: 10px 0;
+}
+
+.bullet-item img {
+  height: 15px;
+  margin-right: 15px;
+}
+
+/* GRADIANT BORDER */
+
+.gradient-border {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+}
+
+.gradiant-holder {
+  background-color: aliceblue;
+  width: 80%;
+  height: 200px;
+  display: block;
+  border:1px red solid;
 }
