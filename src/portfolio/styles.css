@@ -65,11 +65,21 @@ ul {
 }
 
 main {
-  height: 1000px;
+  display: flex;
+  flex-direction: column;
   background: black;
+  align-items: center;
+  justify-content: space-around;
 }
 
 footer {
   height: 100px;
   background: grey;
+}
+
+.project-container {
+  height: 235px;
+  margin: 23px;
+  width: 90%;
+  background-color: aliceblue;
 }
