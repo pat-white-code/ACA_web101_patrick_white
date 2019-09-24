@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+h1, h2, p, ul, li {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -13,8 +19,29 @@ body {
 }
 
 header {
-  height: 100px;
+  display: flex;
+  flex-direction: column;
   background-color: antiquewhite;
+  align-items: center;
+  padding: 15px;
+}
+
+nav {
+  display: flex;
+  width: 70%;
+  height: auto;
+  margin: 10px;
+  justify-content: space-around;
+}
+
+li {
+  display: inline-block;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .quote {
