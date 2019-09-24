@@ -73,7 +73,7 @@ main {
 }
 
 .project-container {
-  height: 235px;
+  height: 450px;
   margin: 23px;
   width: 90%;
   background-color: aliceblue;
@@ -85,13 +85,13 @@ footer {
   padding: 0 20px;
   background: grey;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .footer-nav {
   display: flex;
   width: 100%;
-  height: 45%;
+  height: 40%;
   align-items: center;
   /* border: 1px red solid; */
 }
@@ -99,7 +99,7 @@ footer {
 .footer-social {
   display: flex;
   width:100%;
-  height: 45%;
+  height: 40%;
   justify-content: space-around;
   align-items: center;
   /* border: 1px blue solid; */
@@ -107,4 +107,37 @@ footer {
 
 .footer-social img {
   height: 80%;
+}
+
+
+@media(min-width:768px) {
+  .quote-text {
+    text-align: center;
+  }
+  
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .project-container {
+    width: 40%;
+    max-width: 400px;
+    height: 350px;
+  }
+
+  footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .footer-nav {
+    width: 40%;
+}
+
+.footer-social {
+  width: 40%;
+  
+}
 }
