@@ -49,7 +49,7 @@ ul {
   display: flex;
   flex-direction: column;
   height: 450px;
-  padding: 0 20px;
+  padding: 0 30px;
   background: whitesmoke;
   align-items: center;
   justify-content: center;
@@ -72,14 +72,39 @@ main {
   justify-content: space-around;
 }
 
-footer {
-  height: 100px;
-  background: grey;
-}
-
 .project-container {
   height: 235px;
   margin: 23px;
   width: 90%;
   background-color: aliceblue;
+}
+
+footer {
+  display: flex;
+  height: 100px;
+  padding: 0 20px;
+  background: grey;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer-nav {
+  display: flex;
+  width: 100%;
+  height: 45%;
+  align-items: center;
+  /* border: 1px red solid; */
+}
+
+.footer-social {
+  display: flex;
+  width:100%;
+  height: 45%;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px blue solid; */
+}
+
+.footer-social img {
+  height: 80%;
 }
