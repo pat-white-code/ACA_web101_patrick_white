@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 100px;
+  background-color: antiquewhite;
+}
+
+.quote {
+  height: 450px;
+  background: whitesmoke;
+}
+
+main {
+  height: 1000px;
+  background: black;
+}
+
+footer {
+  height: 100px;
+  background: grey;
+}
