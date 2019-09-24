@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Ui Details</title>
+</head>
+<body>
+  <div class="flex-container">
+    <section class="spacer">
+    </section>
+    <section class="nav-bar">
+      <div class="nav-button-container">
+        <ul class="nav-list">
+          <li class="nav-button"><img src="img/slumber-1.png">home</li>
+          <li class="nav-button active">
+            <img src="img/slumber-1.png" />hotel</li>
+          <li class="nav-button">
+            <img src="img/slumber-1.png">
+            flight</li>
+          <li class="nav-button">
+              <img src="img/slumber-1.png">
+              relax</li>
+        </ul>
+      </div>
+    </section>
+    <a href="nav-bar/nav-bar.html">corrected</a>
+    <div class="spacer"></div>
+    <section class="hue-gradient">
+        <div class="ui-description">
+          <h1>Make your gradients vibrant by changing the hue instead of the lightness.</h1>
+
+          <p>In the author's example, the gradiants use colors that are the same saturation and brightness. The hue is just increased by 10-20.</p>
+
+          <p>What I think is also cool, is that the hover affect is created by reducing the light (last value) by 10% points.</p>
+
+        </div>
+        <div class="hue-gradient-container">
+          <button class="b-1">get in touch</button>
+          <button class="b-2">get involved</button>
+        </div>
+  
+      </section>
+      <div class="spacer"></div>
+    <section class="text-shadow">
+      <div class="ui-description">
+          <h1>Add a subtle shadow to white text on bright background.</h1>
+      </div>
+      <div class="text-shadow-container">
+        <div class="text-shadow-top">
+          <p class="shadow-text big">
+            $1000
+          </p>
+          <p class="shadow-text small">
+            Total revenue
+          </p>
+        </div>
+        <div class="text-shadow-bottom">
+          <p class="shadow-text small">
+            4181 sales
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="spacer"></div>
+    <section class="shift-buttons">
+      <div class="ui-description">
+        <h1>Shift buttons 1/2px up/down for a nice hover effect.</h1>
+        <p>The author uses trasnform: translatey(2px) to move the button on hover.</p> 
+        
+        <p>I think what's really interesting is the way the author uses "filter: brightness(130%)" to make the button "light up" rather than using different colors, as this is a really quick way to acheive the desired result and can be used on elements of different colors.
+        </p>
+
+        <p>The author uses "transition:all" which I hadn't realized was a transition option!</p>
+      </div>
+      <div class="shift-button-container">
+        <button class="shift-button white-on-purple">Create Account</button>
+        <button class="shift-button purple-on-white">Contact Sales</button>
+      </div>
+    </section>
+    <div class="spacer"></div>
+    <section class="text-alignment">
+      <div class="ui-description">
+        <h1>Text Alignment</h1>
+        <p>The goal of this detail is to make text aligned properly with it's corresponding logo. We have a section container called text-alignment, which is flex, width 100% and justify content center. Within this section we have text-alignment-container, which is a div with flex, flex-wrap, width 80% and a background color of Aliceblue.</p>
+
+        <p>Text-alignmnet-container has four divs called .alignment-card, which has display of flex, width 45%, hieght 150px, margin of 13px and justify content of space-between, which creates space between the image and text.</p>
+
+        <p>Within each .alignment-card we have two divs, .text-container and .image-container. image-container has display flex, width 20%, height 100%, and justify contnent center. Text-container is flex-column, width 75%, height 100%.</p>
+
+        <p>Inside each .image-container is an image with class .text-alignment-icon, which has a hieght of 32px and margin-top of 10px. all of the images have a color of #B77CFF</p>
+
+        <p>Inside each .text container, we have an h3 and p element. Both of these elements have margin-block-start/end at 10px/0px. H3 is styled with the same color as the logos, which is rbg(183, 124, 255).</p>
+      </div>
+      <div class="text-alignment-container">
+        <div class="alignment-card">
+          <div class="image-container">
+            <img class="text-alignment-icon" src="img/settings-gears.png" />
+          </div>
+          <div class="text-container">
+            <h3>Database</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem vitae omnis est facilis.</p>
+          </div>
+        </div>
+        <div class="alignment-card">
+          <div class="image-container">
+            <img class="text-alignment-icon" src="./img/database.png" />
+          </div>
+          <div class="text-container">
+            <h3>Servers</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem vitae omnis est facilis.</p>
+          </div>
+        </div>
+        <div class="alignment-card">
+          <div class="image-container">
+            <img class="text-alignment-icon" src="./img/padlock.png" />
+          </div>
+          <div class="text-container">
+            <h3>Privacy</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem vitae omnis est facilis.</p>
+          </div>
+        </div>
+        <div class="alignment-card">
+          <div class="image-container">
+            <img class="text-alignment-icon" src="./img/shield.png" />
+          </div>
+          <div class="text-container">
+            <h3>Security</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat autem vitae omnis est facilis.</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="ui-description">
+        <p>In the author's original code, all of the elements are held in a div with classes "example ex-6". ex-6 declares flex and flex-wrap, whike example declares margin-top of 1.5rem.</p>
+
+        <p>Instead of alignment-card, the other has a div with class "col" to hold each individual item.
+        </p>
+
+        <p>Each "col" has two divs, an icon-col and a text-col. Neither of these div classes have declared style properties in the css, so it is unclear how they are formatted correctly. </p>
+        <p>It is worth noting that in the author's version, there is a css declaration of .col:nth-of-child(2n -1){margin-right: 1.5 rem}. This makes it so that 1st and 3rd items have a right margin.</p>
+        <p>Also, the author does not have an image source where the images appear on the page. In its place, there is an 'i' tag with classes "fa fa-gear". class fa-gear has a ::before pseudo element with a content property of string "\f013". It is worth researching how i tags work, and how and why a string can be linked to source content, or how that string may be a variable to a url.</p>
+      </div>
+    </section>
+    <div class="spacer"></div>
+    <section class="grey-text">
+      <div class="iu-description">
+          <h1>Grey color always look off on colored background.</h1>
+      </div>
+      <div class="grey-text-container">
+        <h3>Discover more</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa incidunt adipisci sed cum natus asperiores eius expedita dolorum aliquam quibusdam, at iusto, quos quis consequuntur porro quas? Itaque, ipsam quas!</p>
+        <form>
+          <input type="text" placeholder="enter your mail">
+          <button>Notify Me</button>
+      </form>
+      </div>
+    </section>
+    <div class="spacer"></div>
+    <section class="bullet-icon">
+      <div class="ui-description">
+        <h1>Use an icon instead of the standard bullet in unordered lists.</h1>
+      </div>
+      <div class="flex-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat unde reiciendis, ea minus inventore, pariatur quo vero, dolorem illo accusamus nisi recusandae sequi nesciunt cumque nulla facilis architecto rerum ipsa?</p>
+        <ul>
+          <li class="bullet-item"><img src="./img/check.png"> Lorem ipsum dolor</li>
+          <li class="bullet-item"><img src="./img/check.png"> amet consectetur </li>
+          <li class="bullet-item"><img src="./img/check.png"> pariatur quo vero,</li>
+          <li class="bullet-item"><img src="./img/check.png">nisi recusandae sequi</li>
+          <li class="bullet-item"><img src="./img/check.png">cumque nulla facilis</li>
+          <li class="bullet-item"><img src="./img/check.png">adipisicing elit</li>
+        </ul>
+      </div>
+    </section>
+    <div class="spacer"></div>
+    <section class="gradiant-border">
+      <div class="ui-description">
+        <h1> Add a gradient border to modals or panels.</h1>
+        <p>This gradient border was created by creating a wrapper div with a background image of a linear gradient. The child div has a width of 100%, height of 95%. The parent wrapper div is flex-column with justify content of flex-end.</p>
+      </div>
+      <div class="gradiant-holder">
+        <div class="gradiant-wrapper">
+          <div class="gradiant-card">
+            <h2>Congrats!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde deleniti quasi accusantium culpa. Nisi, harum cumque error reprehenderit, nesciunt sequi sunt labore dicta, ducimus non qui voluptatibus nobis doloremque!</p>
+            <button class="gradiant-button">
+              accept
+            </button>
+          </div>
+      </div>
+    </section>  
+    <div class="spacer"></div>
+    <section class="contrast">
+      <div class="ui-description">
+          <h1>Use contrast between two adjacent boxes instead of a line.</h1>
+      </div>
+      <div class="contrast-container">
+        <div class="contrast-card">
+          <div class="card-header">
+            <p>Are you sure you want to delete the post?</p>
+          </div>
+          <div class="card-body">
+            <p>If you delete the post you'll never be able to see it again. Alternatively, you can do a back-up of it and then delete. To do this, head back to the post and look for the "Create Backup" button. Then click delete again. </p>
+            <div class="button-container">
+              <button class="contrast-button delete">Delete</button>
+              <button class= "contrast-button cancel">cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="spacer"></div>
+    <section class="body-text">
+      <div class="ui-description">
+        <h1>When in doubt, 16px font size with 1.5 line height looks nice for body text.</h1>
+        <p> Also, you can use a dark shade of gray instead of black to ease the look for the user (instead of using high contrast black and white).</p>
+      </div>
+      <div class="body-text-container">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque autem impedit nesciunt minima dolores omnis iure. Odio consequuntur iusto velit facilis culpa quasi nemo ullam doloremque labore officia? A, quidem.</p>
+      </div>
+    </section>
+    <div class="spacer"> </div>
+    <section class="positive-bold">
+      <div class="ui-description">
+        <h1>Don't use bold color for negative action if it's not the main action.</h1>
+      </div>
+      <div class="positive-bold-container">
+        <button class="cancel">cancel</button>
+        <button class="update">update</button>
+      </div>
+    </section>
+    <div class="spacer"></div>
+  </div>
+  <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/geotatah" title="geotatah">geotatah</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div> -->
+</body>
+</html>
