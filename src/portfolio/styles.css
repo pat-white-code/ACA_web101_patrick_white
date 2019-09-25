@@ -45,6 +45,18 @@ ul {
   justify-content: space-around;
 }
 
+.nav-headshot {
+  display: flex;
+  /* border: 1px red solid; */
+  width: 90%;
+  justify-content: center;
+}
+
+.headshot-img {
+  height: 40px;
+  padding: 0 20px 0 0;
+}
+
 .headshot {
   display: none;
 }
@@ -120,6 +132,10 @@ footer {
     justify-content: space-around;
   }
 
+  .nav-headshot {
+    display: none;
+  }
+  
   .headshot {
     display: flex;
     /* border: 1px red solid; */
