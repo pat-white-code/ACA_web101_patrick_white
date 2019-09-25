@@ -98,3 +98,8 @@ ul {
   width: 70%;
   height: 600px;
 } */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
