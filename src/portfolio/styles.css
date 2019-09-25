@@ -137,7 +137,7 @@ footer {
     display: inline;
   }
   
-  .header {
+  header {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -205,4 +205,13 @@ footer {
   width: 50%;
   height:50%;
   }
+}
+
+@media(min-width: 1025px) {
+  .project-container {
+    width: 28%;
+    max-width: 400px;
+    height: 300px;
+  }
+
 }
