@@ -45,6 +45,10 @@ ul {
   justify-content: space-around;
 }
 
+.logo {
+  display: none;
+}
+
 .nav-headshot {
   display: flex;
   /* border: 1px red solid; */
@@ -53,7 +57,7 @@ ul {
 }
 
 .headshot-img {
-  height: 40px;
+  height: 64px;
   padding: 0 20px 0 0;
 }
 
@@ -127,6 +131,24 @@ footer {
 
 
 @media(min-width:768px) {
+
+
+  .logo {
+    display: inline;
+  }
+  
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  ul {
+    justify-content: flex-end;
+  }
+
+  li {
+    margin: 0 40px 0 0;
+  }
   
   .quote {
     justify-content: space-around;
@@ -135,7 +157,7 @@ footer {
   .nav-headshot {
     display: none;
   }
-  
+
   .headshot {
     display: flex;
     /* border: 1px red solid; */
