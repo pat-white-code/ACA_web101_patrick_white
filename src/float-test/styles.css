@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+  font-size: 20px;
+}
+
+img {
+  height: 200px;
+  float:left;
+  margin: 0 20px 20px 20px;
+}
+
+.float-container {
+  background-color: aquamarine;
+  width: max-content;
+  overflow: hidden;
+}
+
+.clear-fix:after{
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0px;
+  clear: both;
+}
+
+.clear-float {
+  clear: both;
+}
