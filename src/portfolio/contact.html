@@ -36,15 +36,28 @@
       </div>
       <div class="form-holder">
         <form class="contact-form">
-          <label for="full-name">Full Name</label>
-          <input type="text" name="full-name" id="full-name" />
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
-          <label for="message">Message</label>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          <input type="submit" value="send message" />
+          <div class="input-group full-name-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" name="full-name" id="full-name" />
+          </div>
+          <div class="input-group email-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="input-group location-group">
+            <label for="location">Location</label>
+            <input type="text" name="location" id="location">
+          </div>
+          <div class="input-group message-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <div class="input-group button-group">
+              <input type="submit" value="send message" />
+              <input type="reset" name="reset" id="reset" value="reset" />
+            </div>
+          </div=>
         </form>
-      </div>
+      </div=>
     </section>
     <footer>
       <div class="footer-social">

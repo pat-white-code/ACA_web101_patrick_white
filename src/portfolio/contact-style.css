@@ -17,14 +17,17 @@ body {
 .main-container {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  background-color: antiquewhite;
-  align-items: center;
+  height: 150px;
   padding: 15px;
+  background-color: antiquewhite;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
@@ -101,14 +104,29 @@ input, textarea {
   border: 1px grey solid;
 }
 
-input[type="submit"] {
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="submit"], input[type="reset"] {
   /* border: 1px red solid; */
   border: none;
-  margin: 30px 0;
+  margin: 10px 0 20px 0;
   width: 100%;
   background-image: linear-gradient(to bottom, hsl(178, 60%, 50%), hsl(154, 60%, 50%));
   padding: 13px 0px;
   box-shadow: 0px 3px 4px #556;
+}
+
+#reset {
+  margin: 0 0 15px;
+  background-image: none;
+  background-color: #ccc;
+}
+
+#reset:hover {
+  background-color: #aaa;
 }
 
 input[type="submit"]:hover{
@@ -152,4 +170,102 @@ footer {
 
 .footer-social img {
   height: 80%;
+}
+
+/* TABLET MEDIA QUERY */
+
+@media (min-width: 768px) {
+
+  /* HEADER TABLET */
+
+  .logo {
+    display: inline;
+  }
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .nav-headshot {
+    display: none;
+  }
+
+  ul {
+    justify-content: flex-end;
+  }
+
+  li {
+    margin: 0 40px 0 0;
+  }
+  
+  .quote {
+    justify-content: space-around;
+  }
+
+  
+  .headshot {
+    display: flex;
+    /* border: 1px red solid; */
+    width: 70%;
+    justify-content: center;
+    border-bottom: 1px grey solid;
+    padding-bottom: 40px;
+  }
+
+  .quote-section {
+    text-align: center;
+  }
+
+  .headshot-img {
+    height: 100px;
+    margin: 0 40px 0 0px;
+  }
+  
+  .quote-text {
+    text-align: center;
+  }
+  /* -------END-------- */
+
+
+  .form-holder {
+    height: 600px;
+  }
+
+  input[type="submit"], input[type="reset"] {
+    width: 40%;
+    margin: 0 20px;
+  }
+
+  #reset {
+    margin: 0 20px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* FOOTER TABLET */
+  footer {
+    flex-direction: row;
+  }
+
+  .footer-nav {
+    width: 40%;
+}
+
+.footer-social {
+  width: 50%;
+  height:50%;
+  }
+
+}
+
+@media (min-width: 1032px) {
+  .contact-form {
+    width: 50%;
+  }
+  .form-holder{
+    height:500px;
+  }
 }

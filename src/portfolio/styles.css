@@ -223,15 +223,16 @@ footer {
 
 /* BEGIN TABLET MEDIA QUERY */
 @media(min-width:768px) {
-
-
   .logo {
     display: inline;
   }
-  
   header {
     flex-direction: row;
     justify-content: space-between;
+  }
+  
+  .nav-headshot {
+    display: none;
   }
 
   ul {
@@ -246,10 +247,7 @@ footer {
     justify-content: space-around;
   }
 
-  .nav-headshot {
-    display: none;
-  }
-
+  
   .headshot {
     display: flex;
     /* border: 1px red solid; */
