@@ -31,7 +31,7 @@ body {
 .quote-section {
   width: 100%;
   /* height: 350px; */
-  border: 1px red solid;
+  /* border: 1px red solid; */
   text-align: center;
 }
 
@@ -46,7 +46,7 @@ body {
 .about-section {
   height: 600px;
   width: 100%;
-  border: 1px blue solid;
+  /* border: 1px blue solid; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,14 +86,14 @@ body {
 
 .question {
   height:700px;
-  border:1px green solid;
+  /* border:1px green solid; */
   display: flex;
   flex-direction: column;
 }
 
 .question-item {
   flex:1;
-  border:1px orange solid;
+  /* border:1px orange solid; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,7 +114,7 @@ body {
 
 .answer-item {
   flex:1;
-  border: 1px purple solid;
+  /* border: 1px purple solid; */
   display: flex;
   justify-content: center;
   align-items: center;
