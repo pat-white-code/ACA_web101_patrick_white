@@ -89,6 +89,8 @@ body {
   /* border:1px green solid; */
   display: flex;
   flex-direction: column;
+  box-shadow: 1px 1px 6px #777;
+  margin: 20px 0;
 }
 
 .question-item {
@@ -154,8 +156,6 @@ body {
   .question {
     flex-direction: row;
     height: auto;
-    margin: 20px 0;
-    box-shadow: 1px 1px 6px #777;
   }
 
   .question-item {
