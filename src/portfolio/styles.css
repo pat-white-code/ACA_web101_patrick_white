@@ -39,6 +39,16 @@ li {
   display: inline-block;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  transition: all .4s;
+}
+
+.nav-link:hover{
+  color:rgba(0, 0, 0, .5);
+}
+
 ul {
   display: flex;
   width: 100%;

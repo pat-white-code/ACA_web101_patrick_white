@@ -23,7 +23,6 @@ body {
 header {
   display: flex;
   flex-direction: column;
-  height: 150px;
   padding: 15px;
   background-color: antiquewhite;
   justify-content: center;
@@ -46,6 +45,16 @@ ul {
   display: flex;
   width: 100%;
   justify-content: space-around;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  transition: all .4s;
+}
+
+.nav-link:hover{
+  color:rgba(0, 0, 0, .5);
 }
 
 .logo {
@@ -93,6 +102,7 @@ ul {
 
 .contact-form input {
   font-size:1em;
+  padding: 10px;
 }
 
 label {
@@ -101,7 +111,9 @@ label {
 
 input, textarea {
   margin-block-end: 15px;
+  padding: 10px;
   border: 1px grey solid;
+  font-size: 1em;
 }
 
 .input-group {
@@ -266,6 +278,6 @@ footer {
     width: 50%;
   }
   .form-holder{
-    height:500px;
+    height: 650px;
   }
 }
