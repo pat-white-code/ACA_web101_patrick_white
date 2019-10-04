@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #333;
+  color: #eefcfa;
+  font-family: 'Anton', sans-serif;
+}
+
+.nav-section {
+  height: 100px;
+  /* PLACEHOLDER */
+}
+
+.header-section {
+  height: 725px;
+  background-image: url(./img/coffee-shop.jpg);
+  background-size: cover;
+  background-position-x: -223px;
+}
+
+.features-section {
+  height:500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  height:50%;
+  width: 50%;
+  background-size: cover;
+}
+
+.coffee {
+  background-image: url(./img/coffee-mug.jpg);
+  background-position-x: -77px;
+}
+
+.cocktails {
+  background-image: url(./img/cocktails.jpg);
+  background-size: 150%;
+  background-position: center;
+}
+
+.beer {
+  background-image: url(./img/beer.jpg);
+}
+
+.events {
+  background-image: url(./img/events.jpg);
+}
+
+.calendar-section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-card {
+
+  width: 90%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+}
+
+.image-column {
+  width: 37%;
+
+}
+
+.event-img-wrapper {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.event-img {
+  width: 100%;
+}
+
+.description-column {
+
+  display: flex;
+  flex-direction: column;
+  width: 63%;
+  padding: 0px 0px 9px 20px;
+
+}
+
+.event-title {
+  font-size: 1.3em;
+  margin-block-end: 1em;
+  line-height: 1.3em;
+  font-weight: 200;
+}
+
+.event-description {
+  line-height: 1.4em;
+  margin: 0px 0 20px 0;
+  font-weight: 100
+}
+
+.event-date-time {
+  justify-self: flex-end;
+  font-size: .7em;
+  opacity: .7;
+  display: flex;
+  justify-content: space-evenly;
+}
