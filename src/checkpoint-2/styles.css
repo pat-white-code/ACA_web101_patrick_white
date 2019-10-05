@@ -27,7 +27,19 @@ body {
 
 .nav-logo {
   height: 100%;
+}
 
+.hamburger-wrapper {
+  height: 50px;
+  width: 50px;
+  border: 1px red solid;
+}
+
+.hamburger-line {
+  background-color: white;
+  margin: 1px;
+  width: 100%;
+  height: 5px;
 }
 
 .header-section {
