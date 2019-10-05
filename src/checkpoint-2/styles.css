@@ -10,22 +10,19 @@ body {
   font-family: 'Anton', sans-serif;
 }
 
+.main-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
 .nav-section {
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  /* PLACEHOLDER */
-}
-
-.parallax::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .nav-logo {
@@ -35,9 +32,42 @@ body {
 
 .header-section {
   height: 725px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-shadow: 1px 5px 6px black;
+  padding: 30px;
+}
+
+.bg::after {
   background-image: url(./img/coffee-shop.jpg);
   background-size: cover;
   background-position-x: -223px;
+}
+
+.parallax::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateZ(-3px) scale(2);
+}
+
+.parallax::after {
+  content: '';
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index:-1; 
+  transform: translateZ(-1px) scale(1.5);
+  
 }
 
 .features-section {
