@@ -11,8 +11,26 @@ body {
 }
 
 .nav-section {
-  height: 100px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
   /* PLACEHOLDER */
+}
+
+.parallax::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-logo {
+  height: 100%;
+
 }
 
 .header-section {
@@ -112,4 +130,132 @@ body {
   opacity: .7;
   display: flex;
   justify-content: space-evenly;
+}
+
+.food-truck-section {
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food-truck-item {
+  height: 50%;
+  width: 50%;
+  background-size: cover;
+}
+
+.veracruz-text {
+  background-image: url(./img/veracruz-text.jpg);
+}
+
+.veracruz-img {
+  background-image: url(./img/veracruz-img.jpg);
+}
+
+.deedee-img {
+  background-image: url(./img/deedee-img.jpg);
+}
+
+.deedee-text {
+  background-image: url(./img/deedee-text.jpg);
+}
+
+.hours-location-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.logo-circle {
+  width: 90%;
+  margin-top: 25px;
+}
+
+.hours-location-section h1 {
+  font-size:18px;
+  color: rgb(240, 234, 234);
+  font-family: fatfrank, arial;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: .01em;
+  line-height: 1.4em;
+  text-transform: none;
+}
+
+.hours-location-section h3 {
+  font-weight: 100;
+  font-size: 15px;
+  font-family: arial;
+  margin: 5px 0;
+  color: rgb(227, 227, 227);
+}
+
+.footer-section {
+  background-color: rgb(255,255,255);
+}
+
+/* ____________FOOTER_______________ */
+
+.footer-section {
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-row-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-row-wrapper:hover .social-item{
+  opacity: .5;
+}
+
+.social-container {
+  width: 65%;
+  height: 70%;
+  opacity: .8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-item {
+  height: 65%;
+  transition: 150ms ease-in-out;
+}
+
+.social-item:hover {
+  /* FIXME: HOW DO HOVER PSUEDO CLASSES WORK IN TERMS OF ORDER OF IMPORTANCE. I AM HOVERING WITHIN THE PARENT. BUT WHEN I HOVER OVER A CHILD, I WANT THAT CHILD TO BECOME OPAQUE AGAIN. I WOULD THINK THE SPECIFICITY OF THE CHILD WOULD SUPERCEDE THAT OF THE PARENT, BUT THAT DOESNT SEEM TO BE THE CASE. */
+  opacity: 1 !important;
+}
+
+.footer-text-container {
+  height: 30%;
+  padding: 20px 10px;
+}
+
+.footer-text-container p, .website-credits p {
+  font-size: 10px;
+  color: rgba(0,0,0,.7);
+  line-height: 2em;
+  color: rgba(28,28,28,.71);
+}
+
+.container-2 {
+  text-align: end;
+}
+
+.website-credits {
+  height: 10%;
+  display: flex;
+  justify-content: center;
 }
