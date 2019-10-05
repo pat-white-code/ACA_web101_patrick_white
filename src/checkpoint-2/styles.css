@@ -29,17 +29,37 @@ body {
   height: 100%;
 }
 
+.hamburger-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 .hamburger-wrapper {
   height: 50px;
   width: 50px;
-  border: 1px red solid;
+  cursor: pointer;
 }
 
 .hamburger-line {
-  background-color: white;
-  margin: 1px;
+  background-color: rgba(250, 250, 250, 0.8);
+  margin: 6px;
   width: 100%;
   height: 5px;
+  transition: 400ms;
+}
+
+.change .line-1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .line-2 {
+  opacity: 0;
+}
+
+.change .line-2 {
+  transform: rotate(45deg) translate(-8px, -8px)
 }
 
 .header-section {
