@@ -113,10 +113,16 @@ body {
   padding: 30px;
 }
 
+.header-nav {
+  display: none;
+}
+
 .bg::after {
   background-image: url(./img/coffee-shop.jpg);
   background-size: cover;
   background-position-x: -223px;
+  background-color: black;
+  opacity: .8;
 }
 
 .parallax::after {
@@ -360,4 +366,74 @@ body {
   height: 10%;
   display: flex;
   justify-content: center;
+}
+
+@media(min-width: 768px) {
+
+  .nav-section {
+    display: none;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: flex-start;
+  }
+
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    border: 1px red solid;
+  }
+
+  .logo-col {
+    width: 40%;
+    border: 1px blue solid;
+    height: 100%;
+  }
+
+  .logo-col img {
+    height: 100%;
+    text-shadow: 2px 2px 8px black;
+  }
+
+  .nav-col {
+    width: 60%;
+    border: 1px green solid;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    align-items: center;
+  }
+
+  .nav-col ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .nav-col li {
+    list-style: none;
+    display: inline-block;
+  }
+  .nav-col a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 22px;
+  }
+
+  .header-text-container {
+    border: 1px red solid;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
