@@ -103,7 +103,7 @@ body {
 }
 
 .header-section {
-  height: 725px;
+  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -123,17 +123,6 @@ body {
   background-position-x: -223px;
   background-color: black;
   opacity: .8;
-}
-
-.parallax::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  transform: translateZ(-3px) scale(2);
 }
 
 .parallax::after {
@@ -180,14 +169,13 @@ body {
 }
 
 .calendar-section {
-  margin-top: 100px;
+  margin: 100px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .event-card {
-
   width: 90%;
   margin: 20px 0;
   display: flex;
@@ -197,13 +185,14 @@ body {
 
 .image-column {
   width: 37%;
-
 }
 
+/* TODO: Create a good image wrapper so that all images have same dimensions and crop properly */
+
 .event-img-wrapper {
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
+  /* width: 100%;
+  height: 50%;
+  overflow: hidden; */
 }
 
 .event-img {
@@ -250,6 +239,7 @@ body {
   height: 50%;
   width: 50%;
   background-size: cover;
+  opacity: .8;
 }
 
 .veracruz-text {
@@ -274,7 +264,7 @@ body {
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 60px;
 }
 
 .logo-circle {
@@ -301,17 +291,14 @@ body {
   margin: 5px 0;
   color: rgb(227, 227, 227);
 }
-
-.footer-section {
-  background-color: rgb(255,255,255);
-}
-
 /* ____________FOOTER_______________ */
 
 .footer-section {
   height: 425px;
   display: flex;
   flex-direction: column;
+  background-color: rgb(255,255,255);
+  align-items: center;
 }
 
 .social-row-wrapper {
@@ -323,22 +310,23 @@ body {
   align-items: center;
 }
 
-.social-row-wrapper:hover .social-item{
-  opacity: .5;
-}
-
 .social-container {
-  width: 65%;
+  width: 52%;
   height: 70%;
   opacity: .8;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
+
+.social-container:hover .social-item{
+  opacity: .5;
 }
 
 .social-item {
   height: 65%;
-  transition: 150ms ease-in-out;
+  transition: 200ms ease-in;
+  cursor: pointer;
 }
 
 .social-item:hover {
@@ -346,14 +334,20 @@ body {
   opacity: 1 !important;
 }
 
+.footer-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  width: 90%;
+}
+
 .footer-text-container {
-  height: 30%;
+  height: 50%;
   padding: 20px 10px;
 }
 
 .footer-text-container p, .website-credits p {
   font-size: 10px;
-  color: rgba(0,0,0,.7);
   line-height: 2em;
   color: rgba(28,28,28,.71);
 }
@@ -366,6 +360,16 @@ body {
   height: 10%;
   display: flex;
   justify-content: center;
+}
+
+.website-credits a {
+  color: rgba(28,28,28,1);
+  transition: 300ms;
+  text-decoration: none;
+}
+
+.website-credits a:hover {
+  color: rgba(28,28,28,.71);
 }
 
 @media(min-width: 768px) {
@@ -384,28 +388,20 @@ body {
     display: flex;
     flex-direction: row;
     height: 150px;
-    border: 1px red solid;
   }
 
   .logo-col {
     width: 40%;
-    border: 1px blue solid;
     height: 100%;
   }
 
   .logo-col img {
     height: 100%;
-    text-shadow: 2px 2px 8px black;
   }
 
   .nav-col {
     width: 60%;
-    border: 1px green solid;
-    height: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    padding: 10px 20px;
     align-items: center;
   }
 
@@ -415,11 +411,23 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
+    text-shadow: none;
+  }
+
+  .nav-col ul:hover > li {
+    opacity: .5;
+  }
+
+  .nav-col ul:hover > li:hover {
+    opacity: 1;
+    /* transform: scale(1.05); */
+    /* text-shadow: 0 0px 6px #333; */
   }
 
   .nav-col li {
     list-style: none;
     display: inline-block;
+    transition: .2s;
   }
   .nav-col a {
     text-decoration: none;
@@ -428,12 +436,74 @@ body {
   }
 
   .header-text-container {
-    border: 1px red solid;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .bg::after {
+    background-image: url(./img/coffee-shop.jpg);
+    background-size: 150%;
+  }
+  
+  .feature-card {
+    width: 25%;
+    height: 100%;
+  }
+
+  .features-section {
+    height: 250px;
+  }
+
+  .event-card {
+    width: 70%;
+    /* margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif; */
+  }
+
+  .food-truck-section {
+    height: 200px;
+    /* display: flex; */
+    flex-wrap: nowrap;
+  }
+  
+  .food-truck-item {
+    height: 100%;
+    width: 25%;
+    /* background-size: cover; */
+  }
+
+  .logo-circle {
+    width: 100px;
+  }
+
+  .footer-section {
+    padding: 45px;
+  }
+
+  .social-container {
+    width: 22%;
+    /* height: 90%; MOBILE*/
+  }
+
+  .footer-text-wrapper {
+    flex-direction: row;
+    width: 60%;
+  }
+
+  .footer-text-container {
+    height: 100%;
+    width: 50%;
+    /* padding: 20px 10px; */
+  }
+
+  .footer-text-container p, .website-credits p {
+    font-size: 16px;
+    line-height: 2em;
   }
 
 }
