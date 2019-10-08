@@ -172,6 +172,10 @@ body {
   padding: 20px 0;
 }
 
+.staff-wrapper {
+  height:100%;
+  width:100%;
+}
 
 .coffee-staff {
   height: 37%;
@@ -215,7 +219,7 @@ body {
 
 
 
-/* ____________FOOTER_______________ */
+/* ____________FOOTER-DESKTOP_________ */
 
 .footer-section {
   height: 425px;
@@ -344,8 +348,6 @@ body {
 
   .nav-col ul:hover > li:hover {
     opacity: 1;
-    /* transform: scale(1.05); */
-    /* text-shadow: 0 0px 6px #333; */
   }
 
   .nav-col li {
@@ -369,41 +371,57 @@ body {
 
   .coffee::after {
     background-size: cover;
-    background-image: url(./img/coffee-bg-2.jpg);
-  }
-  
-  .feature-card {
-    width: 25%;
-    height: 100%;
   }
 
-  .features-section {
-    height: 250px;
-  }
+  /* _____________COFFEE-SECTION DESKTOP_________ */
 
-  .event-card {
-    width: 70%;
-    /* margin: 20px 0;
-    display: flex;
+  .coffee-section {
+    height: 100vh;
     flex-direction: row;
-    font-family: sans-serif; */
+    padding: 30px 100px;
   }
 
-  .food-truck-section {
-    height: 200px;
-    /* display: flex; */
-    flex-wrap: nowrap;
+  .coffee-img-col {
+  height: 100%;
+  width: 30%;
+  align-items: flex-start;
   }
-  
-  .food-truck-item {
+
+  .coffee-img-col img {
+    width: 100%;
+    height: auto;
+  }
+
+  .coffee-bio-col {
+    width: 70%;
     height: 100%;
-    width: 25%;
-    /* background-size: cover; */
+    padding-left: 40px;
   }
 
-  .logo-circle {
-    width: 100px;
+  .staff-wrapper {
+    display: flex;
+    overflow: hidden;
+    height: 52%;
+    width: 100%;
   }
+
+  .coffee-staff {
+    height: 130%;
+    width: 50%;
+  }
+
+  .staff-headshot {
+    width: 76%;
+    height: 100%;
+  }
+
+  .staff-title {
+    width: 81%;
+    height: 33%;
+  }
+
+  /* ____________FOOTER-DESKTOP_________ */
+
 
   .footer-section {
     padding: 45px;
@@ -411,7 +429,6 @@ body {
 
   .social-container {
     width: 22%;
-    /* height: 90%; MOBILE*/
   }
 
   .footer-text-wrapper {
@@ -422,7 +439,6 @@ body {
   .footer-text-container {
     height: 100%;
     width: 50%;
-    /* padding: 20px 10px; */
   }
 
   .footer-text-container p, .website-credits p {
