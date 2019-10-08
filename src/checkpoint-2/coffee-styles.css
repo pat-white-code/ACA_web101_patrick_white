@@ -119,7 +119,7 @@ body {
 }
 
 .coffee::after {
-  background-image: url(./img/coffee-bg.jpg);
+  background-image: url(./img/coffee-bg-2.jpg);
   background-size: cover;
   background-position: center;
   /* background-position-x: -223px; */
@@ -294,4 +294,140 @@ body {
 
 .website-credits a:hover {
   color: rgba(28,28,28,.71);
+}
+
+@media(min-width: 768px) {
+
+  .nav-section {
+    display: none;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: flex-start;
+  }
+
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+  }
+
+  .logo-col {
+    width: 40%;
+    height: 100%;
+  }
+
+  .logo-col img {
+    height: 100%;
+  }
+
+  .nav-col {
+    width: 60%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-col ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    text-shadow: none;
+  }
+
+  .nav-col ul:hover > li {
+    opacity: .5;
+  }
+
+  .nav-col ul:hover > li:hover {
+    opacity: 1;
+    /* transform: scale(1.05); */
+    /* text-shadow: 0 0px 6px #333; */
+  }
+
+  .nav-col li {
+    list-style: none;
+    display: inline-block;
+    transition: .2s;
+  }
+  .nav-col a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 22px;
+  }
+
+  .header-text-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .coffee::after {
+    background-size: cover;
+    background-image: url(./img/coffee-bg-2.jpg);
+  }
+  
+  .feature-card {
+    width: 25%;
+    height: 100%;
+  }
+
+  .features-section {
+    height: 250px;
+  }
+
+  .event-card {
+    width: 70%;
+    /* margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif; */
+  }
+
+  .food-truck-section {
+    height: 200px;
+    /* display: flex; */
+    flex-wrap: nowrap;
+  }
+  
+  .food-truck-item {
+    height: 100%;
+    width: 25%;
+    /* background-size: cover; */
+  }
+
+  .logo-circle {
+    width: 100px;
+  }
+
+  .footer-section {
+    padding: 45px;
+  }
+
+  .social-container {
+    width: 22%;
+    /* height: 90%; MOBILE*/
+  }
+
+  .footer-text-wrapper {
+    flex-direction: row;
+    width: 60%;
+  }
+
+  .footer-text-container {
+    height: 100%;
+    width: 50%;
+    /* padding: 20px 10px; */
+  }
+
+  .footer-text-container p, .website-credits p {
+    font-size: 16px;
+    line-height: 2em;
+  }
+
 }
