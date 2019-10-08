@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #333;
+  color: #eefcfa;
+  font-family: 'Anton', sans-serif;
+}
+
+.main-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.nav-section {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.nav-logo {
+  height: 100%;
+}
+
+.hamburger-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.hamburger-wrapper {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  background-color: rgba(250, 250, 250, 0.8);
+  margin: 6px;
+  width: 100%;
+  height: 5px;
+  transition: 300ms;
+}
+
+.change .line-1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .line-2 {
+  opacity: 0;
+}
+
+.change .line-3 {
+  transform: rotate(-134deg) translate(8px, 8px);
+}
+
+.side-nav-mobile {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 15px;
+  /* Desktop: padding-top: 60px */
+  transition: 300ms;
+}
+
+.open {
+  width: 300px;
+}
+
+.side-nav-mobile a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  /* DESKTOP font-size: 25px; */
+  font-size: 32px;
+  color: #818181;
+  display: block;
+  transition: .3s;
+}
+
+.side-nav-mobile a:hover{
+  color: #F1f1f1;
+}
+
+.side-nav-mobile .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+.header-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-shadow: 1px 5px 6px black;
+  padding: 30px;
+}
+
+.header-nav {
+  display: none;
+}
+
+.coffee::after {
+  background-image: url(./img/coffee-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  /* background-position-x: -223px; */
+  background-color: black;
+  opacity: .8;
+}
+
+.parallax::after {
+  content: '';
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index:-1; 
+  transform: translateZ(-1px) scale(2);
+}
+
+.coffee-section {
+  height: 700px;
+  border: 1px red solid;
+}
+
+/* ____________FOOTER_______________ */
+
+.footer-section {
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255,255,255);
+  align-items: center;
+}
+
+.social-row-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-container {
+  width: 52%;
+  height: 70%;
+  opacity: .8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-container:hover .social-item{
+  opacity: .5;
+}
+
+.social-item {
+  height: 65%;
+  transition: 200ms ease-in;
+  cursor: pointer;
+}
+
+.social-item:hover {
+  /* FIXME: HOW DO HOVER PSUEDO CLASSES WORK IN TERMS OF ORDER OF IMPORTANCE. I AM HOVERING WITHIN THE PARENT. BUT WHEN I HOVER OVER A CHILD, I WANT THAT CHILD TO BECOME OPAQUE AGAIN. I WOULD THINK THE SPECIFICITY OF THE CHILD WOULD SUPERCEDE THAT OF THE PARENT, BUT THAT DOESNT SEEM TO BE THE CASE. */
+  opacity: 1 !important;
+}
+
+.footer-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  width: 90%;
+}
+
+.footer-text-container {
+  height: 50%;
+  padding: 20px 10px;
+}
+
+.footer-text-container p, .website-credits p {
+  font-size: 10px;
+  line-height: 2em;
+  color: rgba(28,28,28,.71);
+}
+
+.container-2 {
+  text-align: end;
+}
+
+.website-credits {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.website-credits a {
+  color: rgba(28,28,28,1);
+  transition: 300ms;
+  text-decoration: none;
+}
+
+.website-credits a:hover {
+  color: rgba(28,28,28,.71);
+}
