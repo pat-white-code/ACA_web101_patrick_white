@@ -144,6 +144,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
+  position: relative;
 }
 
 .contact-wrapper {
@@ -177,6 +178,19 @@ body {
   align-items: center;
   font-size: 1em;
   cursor: pointer;
+}
+
+.form-popup {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right:0;
+  height: 100vh;
+  z-index: 10;
+  background-color: white;
+  color: black;
 }
 
 /* ____________FOOTER_______________ */
