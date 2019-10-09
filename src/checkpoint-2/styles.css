@@ -319,21 +319,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
 }
 
-.social-container:hover .social-item{
+
+.social-container:hover > .social-item{
   opacity: .5;
 }
 
 .social-item {
   height: 65%;
-  transition: 200ms ease-in;
+  transition: .2s;
   cursor: pointer;
+  pointer-events: auto;
 }
 
-.social-item:hover {
-  /* FIXME: HOW DO HOVER PSUEDO CLASSES WORK IN TERMS OF ORDER OF IMPORTANCE. I AM HOVERING WITHIN THE PARENT. BUT WHEN I HOVER OVER A CHILD, I WANT THAT CHILD TO BECOME OPAQUE AGAIN. I WOULD THINK THE SPECIFICITY OF THE CHILD WOULD SUPERCEDE THAT OF THE PARENT, BUT THAT DOESNT SEEM TO BE THE CASE. */
-  opacity: 1 !important;
+.social-container:hover > .social-item:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .footer-text-wrapper {

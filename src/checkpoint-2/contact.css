@@ -103,7 +103,7 @@ body {
 }
 
 .header-section {
-  height: 100vh;
+  height: 50vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -117,8 +117,8 @@ body {
   display: none;
 }
 
-.bg::after {
-  background-image: url(./img/coffee-shop.jpg);
+.contact-bg::after {
+  background-image: url(./img/contact-bg.jpg);
   background-size: cover;
   background-position-x: -223px;
   background-color: black;
@@ -134,7 +134,7 @@ body {
   bottom: 0;
   left: 0;
   z-index:-1; 
-  transform: translateZ(-1px) scale(1.5);
+  transform: translateZ(-1px) scale(2);
   
 }
 
