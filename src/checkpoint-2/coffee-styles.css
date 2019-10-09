@@ -165,11 +165,10 @@ body {
 
 .coffee-bio {
   height: max-content;
-  line-height: 1.5em;
   margin-block-end: 20px;
-  color: rgba(250,250,250, .8);
-  height: max-content;
   padding: 20px 0;
+  line-height: 1.5em;
+  color: rgba(250,250,250, .8);
 }
 
 .staff-wrapper {
@@ -199,17 +198,17 @@ body {
 }
 
 .staff-title {
-  width: 87%;
   height: 23%;
+  width: 87%;
+  padding: 25px;
   background-color: black;
   transform: translateX(20px) translateY(-80px);
-  padding: 25px;
 }
 
 .staff-title h1 {
   color: rgb(255, 255, 255);
-  font-size: 16px;
   margin-block-end: 10px;
+  font-size: 16px;
 }
 
 .staff-title h3 {
@@ -231,9 +230,9 @@ body {
 
 .social-row-wrapper {
   width: 100%;
+  height: 30%;
   display: flex;
   flex-direction: row;
-  height: 30%;
   justify-content: center;
   align-items: center;
 }
@@ -241,10 +240,10 @@ body {
 .social-container {
   width: 52%;
   height: 70%;
-  opacity: .8;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: .8;
 }
 
 .social-container:hover .social-item{
@@ -285,8 +284,8 @@ body {
 }
 
 .website-credits {
-  height: 10%;
   display: flex;
+  height: 10%;
   justify-content: center;
 }
 
@@ -313,9 +312,9 @@ body {
   }
 
   .header-nav {
+    height: 150px;
     display: flex;
     flex-direction: row;
-    height: 150px;
   }
 
   .logo-col {

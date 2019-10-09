@@ -123,6 +123,7 @@ body {
   background-position-x: -223px;
   background-color: black;
   opacity: .8;
+  background-position: center;
 }
 
 .parallax::after {
@@ -239,6 +240,7 @@ body {
   height: 50%;
   width: 50%;
   background-size: cover;
+  background-position: center;
   opacity: .8;
 }
 
