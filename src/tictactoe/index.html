@@ -8,6 +8,9 @@
   <title>Tic Tac Toe</title>
 </head>
 <body>
+  <div class="play-again">
+    <h1 onclick="reset()">Play again?</h1>
+  </div>
   <div class="game-grid">
     <div class="box box-1" onclick="addGamePiece(this)"></div>
     <div class="box box-2" onclick="addGamePiece(this)"></div>
@@ -20,11 +23,16 @@
     <div class="box box-9" onclick="addGamePiece(this)"></div>
   </div>
   <div class="scoreboard">
-    <h1 class="player-1">Player 1</h1>
-    <p>Score: <span class="player-1-score"></span>
-    <h1 class="player-2">Player 2</h1>
-    <p>Score: <span class="player-2-score"></p>
+    <div class="player player-display player-1">
+      <h1>Player 1</h1>
+      <p>Score: <span class="player-1-score"></span></p>
+    </div>
+    <div class="player player-display player-2">
+      <h1>Player 2</h1>
+      <p>Score: <span class="player-2-score"></p>
+    </div>
   </div>
+  <script src="./jquery.js"></script>
+  <script src="./app.js"></script>
 </body>
-<script src="./app.js"></script>
 </html>

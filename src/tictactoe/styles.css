@@ -11,22 +11,89 @@ body {
   flex-direction: column;
 }
 
+.play-again {
+
+}
+
+.play-again:hover{
+  color: white;
+  cursor: pointer;
+}
+
 .game-grid {
   width: 500px;
   height: 500px;
-  border: 1px red solid;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
 }
 
+
 .box {
-  border: 1px blue solid;
   width: 32%;
   height: 33%;
   display: flex;
+  transition: 500ms;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
 }
 
+.box:hover{
+  background-color: rgb(250,250,250, .3);
+}
+
+.box-1, .box-4, .box-7 {
+  border-right: 4px chartreuse solid;
+}
+.box-2, .box-5, .box-8 {
+  border-right: 4px chartreuse solid;
+}
+.box-4, .box-5, .box-6 {
+  border-top: 4px chartreuse solid;
+}
+.box-7, .box-8, .box-9 {
+  border-top: 4px chartreuse solid;
+}
+
+.X {
+  background-color: rgba(127, 255, 0, .6);
+  pointer-events: none;
+}
+
+.O {
+  background-color: rgb(147, 147, 248);
+  pointer-events: none;
+}
+
+.scoreboard {
+  margin-top: 40px;
+}
+.player {
+  transition: color 300ms,                     font-size 2s,
+              transform 2s;
+}
 .player-1 {
   color: white;
+  background-color: rgba(127, 255, 0, .6)
+}
+
+.player-2 {
+
+  background-color: rgb(147, 147, 248);
+}
+
+.scoreboard {
+  display: flex;
+  width:100%;
+  justify-content:center;
+}
+
+.player-display {
+  display: flex;
+  flex-direction: column;
+  margin: 0 40px;
 }
