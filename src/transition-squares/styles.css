@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header{
+  padding: 50px;
+  text-align: center;
+}
+
+.square {
+  height:50px;
+  width: 50px;
+  border: 1px black solid;
+  margin: 30px;
+  transition: 2s;
+}
+
+.square:nth-child(even){
+  transition: 3s ease-in-out;
+}
+
+.square:nth-child(odd){
+  transition: 1s ease;
+}
+
+.main-container:hover .square:nth-child(even){
+  transform: scale(2) translateX(200px) rotate(360deg);
+
+}
+
+.main-container:hover .square:nth-child(odd) {
+  transform: scale(0.5) translateX(-500px) rotate(-360deg);
+}
+
+.lightgoldenrodyellow {
+  background-color: lightgoldenrodyellow;
+}
+.lightgray {
+  background-color: lightgray;
+}
+.lightgreen {
+  background-color: lightgreen;
+}
+.lightpink {
+  background-color: lightpink;
+}
+.lightsteelblue {
+  background-color: lightsteelblue;
+}
+.lightslategrey {
+  background-color: lightslategrey;
+}
+.lightseagreen {
+  background-color: lightseagreen;
+}
+.lightsalmon {
+  background-color: lightsalmon;
+}
+.burlywood {
+  background-color: burlywood;
+}
+.crimson {
+  background-color: crimson
+}
+.darkolivegreen {
+  background-color: darkolivegreen;
+}
+.firebrick {
+  background-color: firebrick;
+}
