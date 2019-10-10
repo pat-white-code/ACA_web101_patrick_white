@@ -51,7 +51,10 @@
       <div class="form-popup">
           <div class="container">
             <form action="action_page.php">
-              <h1>Say Hello!</h1>
+              <div class = "form-header">
+                <h1>Say Hello!</h1>
+                <p class="close-button" onclick="closeForm()">X</p>
+              </div>
               <label for="fname">First Name</label>
               <input type="text" id="fname" name="firstname" placeholder="Your name..">
           
@@ -68,7 +71,6 @@
           
             </form>
           </div>
-        <h1 class="close-button" onclick="closeForm()">Close Form</h1>
       </div>
       <div class="contact-wrapper">
         <div class="contact-col col-1">

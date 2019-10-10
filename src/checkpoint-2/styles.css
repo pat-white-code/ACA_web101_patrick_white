@@ -74,6 +74,7 @@ body {
   padding-top: 15px;
   /* Desktop: padding-top: 60px */
   transition: 300ms;
+  font-family: prohibition, sans-serif;
 }
 
 .open {
@@ -109,8 +110,8 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  text-shadow: 1px 5px 6px black;
   padding: 30px;
+  font-family: prohibition, sans-serif;
 }
 
 .header-nav {
@@ -148,6 +149,14 @@ body {
   height:50%;
   width: 50%;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: prohibition, sans-serif;
+}
+
+.feature-card h1 {
+  font-size: 32px;
 }
 
 .coffee {
@@ -201,25 +210,28 @@ body {
 }
 
 .description-column {
-
   display: flex;
   flex-direction: column;
   width: 63%;
   padding: 0px 0px 9px 20px;
-
 }
 
 .event-title {
   font-size: 1.3em;
   margin-block-end: 1em;
   line-height: 1.3em;
-  font-weight: 200;
+  font-family: amplitude-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 300;
 }
 
 .event-description {
   line-height: 1.4em;
   margin: 0px 0 20px 0;
-  font-weight: 100
+  font-weight: 100;
+  font-family: amplitude-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 300;
 }
 
 .event-date-time {
@@ -283,7 +295,8 @@ body {
   font-size: 18px;
   letter-spacing: .01em;
   line-height: 1.4em;
-  text-transform: none;
+  text-transform: uppercase;
+
 }
 
 .hours-location-section h3 {
@@ -301,6 +314,9 @@ body {
   flex-direction: column;
   background-color: rgb(255,255,255);
   align-items: center;
+  font-family: amplitude-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 300;
 }
 
 .social-row-wrapper {
@@ -443,9 +459,14 @@ body {
   .header-text-container {
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
+  }
+
+  .header-text-container h1 {
+  line-height: 2em;
+  margin-left: 50px;
   }
 
   .bg::after {

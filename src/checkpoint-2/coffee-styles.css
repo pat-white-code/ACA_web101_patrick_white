@@ -72,8 +72,8 @@ body {
   background-color: #111;
   overflow-x: hidden;
   padding-top: 15px;
-  /* Desktop: padding-top: 60px */
   transition: 300ms;
+  font-family: prohibition, sans-serif;
 }
 
 .open {
@@ -112,6 +112,7 @@ body {
   overflow: hidden;
   text-shadow: 1px 5px 6px black;
   padding: 30px;
+  font-family: prohibition, sans-serif;
 }
 
 .header-nav {
@@ -165,10 +166,16 @@ body {
 
 .coffee-bio {
   height: max-content;
-  margin-block-end: 20px;
   padding: 20px 0;
   line-height: 1.5em;
   color: rgba(250,250,250, .8);
+  font-family: amplitude-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.coffee-bio p {
+  margin: 20px 0;
 }
 
 .staff-wrapper {
@@ -226,6 +233,9 @@ body {
   flex-direction: column;
   background-color: rgb(255,255,255);
   align-items: center;
+  font-family: amplitude-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 300;
 }
 
 .social-row-wrapper {

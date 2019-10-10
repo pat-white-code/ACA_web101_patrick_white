@@ -4,10 +4,20 @@
   margin: 0;
 }
 
+/* 
+font-family: prohibition, sans-serif;
+font-weight: 400;
+font-style: normal;
+*/
+
+/* font-family: fatfrank, sans-serif;
+font-weight: 400;
+font-style: normal; */
+
 body {
   background: #333;
   color: #eefcfa;
-  font-family: 'Anton', sans-serif;
+  font-family: arial, sans-serif;
 }
 
 .main-wrapper {
@@ -74,6 +84,7 @@ body {
   padding-top: 15px;
   /* Desktop: padding-top: 60px */
   transition: 300ms;
+  font-family: prohibition, sans-serif;
 }
 
 .open {
@@ -94,13 +105,13 @@ body {
   color: #F1f1f1;
 }
 
-.side-nav-mobile .closebtn {
+/* .side-nav-mobile .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
-}
+} */
 
 .header-section {
   height: 50vh;
@@ -147,6 +158,17 @@ body {
   position: relative;
 }
 
+.contact-section h1 {
+  font-family: fatfrank, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3em;
+}
+
+.contact-section p {
+  font-family: rubik;
+}
+
 .contact-wrapper {
   display: flex;
   flex-direction: column;
@@ -156,7 +178,6 @@ body {
 .contact-col {
   display: flex;
   flex-direction: column;
-  border: 1px red solid;
   margin: 25px 0;
   height: 50%;
   width: 100%;
@@ -180,6 +201,11 @@ body {
   cursor: pointer;
 }
 
+.contact-button:hover {
+  background-color: white;
+  color: #333;
+}
+
 .form-popup {
   position: absolute;
   display: none;
@@ -187,26 +213,44 @@ body {
   left: 0;
   bottom: 0;
   right:0;
-  height: 100vh;
+  height: 50vh;
   z-index: 10;
-  background-color: white;
   color: black;
   background-color: #f2f2f2;
+  font-family: amplitude-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 300;
 }
 
-/* Style inputs with type="text", select elements and textareas */
+.form-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 20px 0 0;
+}
+
+.close-button {
+  cursor: pointer;
+  transition: .2s;
+  font-size: 18px;
+}
+
+.close-button:hover {
+  color: #444;
+}
+
 input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px;
+  margin-bottom: 16px; 
+  resize: vertical 
 }
 
-/* Style the submit button with a specific background color etc */
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
@@ -216,12 +260,10 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -236,6 +278,9 @@ input[type=submit]:hover {
   flex-direction: column;
   background-color: rgb(255,255,255);
   align-items: center;
+  font-family: amplitude-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 300;
 }
 
 .social-row-wrapper {
@@ -267,7 +312,6 @@ input[type=submit]:hover {
 }
 
 .social-item:hover {
-  /* FIXME: HOW DO HOVER PSUEDO CLASSES WORK IN TERMS OF ORDER OF IMPORTANCE. I AM HOVERING WITHIN THE PARENT. BUT WHEN I HOVER OVER A CHILD, I WANT THAT CHILD TO BECOME OPAQUE AGAIN. I WOULD THINK THE SPECIFICITY OF THE CHILD WOULD SUPERCEDE THAT OF THE PARENT, BUT THAT DOESNT SEEM TO BE THE CASE. */
   opacity: 1 !important;
 }
 
@@ -325,6 +369,7 @@ input[type=submit]:hover {
     display: flex;
     flex-direction: row;
     height: 150px;
+    font-family: prohibition, sans-serif;
   }
 
   .logo-col {
@@ -357,8 +402,6 @@ input[type=submit]:hover {
 
   .nav-col ul:hover > li:hover {
     opacity: 1;
-    /* transform: scale(1.05); */
-    /* text-shadow: 0 0px 6px #333; */
   }
 
   .nav-col li {
@@ -384,39 +427,37 @@ input[type=submit]:hover {
     background-image: url(./img/coffee-shop.jpg);
     background-size: 150%;
   }
+
+  /* ____________ CONTACT SECTION DESKTOP________ */
   
-  .feature-card {
-    width: 25%;
-    height: 100%;
-  }
 
-  .features-section {
-    height: 250px;
-  }
-
-  .event-card {
-    width: 70%;
-    /* margin: 20px 0;
-    display: flex;
+  .contact-wrapper {
     flex-direction: row;
-    font-family: sans-serif; */
+    /* height: 100%; */
   }
 
-  .food-truck-section {
-    height: 200px;
-    /* display: flex; */
-    flex-wrap: nowrap;
-  }
-  
-  .food-truck-item {
+  .contact-col {
     height: 100%;
-    width: 25%;
-    /* background-size: cover; */
+    width: 50%;
+    padding: 60px 0;
   }
 
-  .logo-circle {
-    width: 100px;
+
+  .form-popup {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    height: 50px;
+    z-index: 10;
+    background-color: white;
+    color: black;
+    background-color: #f2f2f2;
   }
+
+  /* ________ FOOTER DESKTOP ____________ */
 
   .footer-section {
     padding: 45px;
