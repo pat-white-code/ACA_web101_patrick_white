@@ -15,11 +15,11 @@ const playAgain = document.querySelector('.play-again');
 
 function reset() {
   console.log('reset here')
-  $('.box').css("backgroundColor", "transparent");
+  turn = 0;
   $('.box').empty();
   $('.box').removeClass('X');
   $('.box').removeClass('O');
-  $('.box').setAttribute("onclick", "addGamePiece(this)");
+  $('.box').attr("onclick","addGamePiece(this)");
 }
 
 let playerOneScore = 0;
