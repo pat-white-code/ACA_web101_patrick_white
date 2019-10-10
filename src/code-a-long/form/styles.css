@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container .form-container {
+  height: 450px;
+  width: 750px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border: 1px black solid;
+  overflow: hidden;
+}
+
+.form-container--img {
+height: 100%;
+flex: 1;
+background-image: url('./tacos-and-dip.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.form-container--form{
+  height: 100%;
+  flex: 2;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.input-group, .inner-group {
+  display: flex;
+  flex-direction:column;
+}
+
+.input-group:nth-child(3){
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.input-group {
+  padding: 10px 0;
+}
+
+input{
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+input:focus {
+  outline: none;
+}
