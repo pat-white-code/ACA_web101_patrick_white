@@ -15,7 +15,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "1 2 3 4 5";
   overflow:hidden;
 }
 
@@ -37,6 +36,22 @@
   animation-name: falling;
   animation-duration: 5s;
   animation-fill-mode: both;
+}
+
+.position-1 {
+  grid-column: 1;
+}
+.position-2 {
+  grid-column: 2;
+}
+.position-3 {
+  grid-column: 3;
+}
+.position-4 {
+  grid-column: 4;
+}
+.position-5 {
+  grid-column: 5;
 }
 
 @keyframes falling {
