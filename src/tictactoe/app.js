@@ -76,7 +76,9 @@ function checkForWinner() {
     //BOX 5 WIN SCENARIOS
   } else if (box7.classList.contains(gamePiece) && box8.classList.contains(gamePiece) && box9.classList.contains(gamePiece)) {
     finishGame(gamePiece);
-  } else {
+  } else  
+  // TODO: CREATE DRAW CONCLUSION!
+  {
     turn++;
     changePlayer()
     return;
