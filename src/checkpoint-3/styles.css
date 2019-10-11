@@ -1,0 +1,25 @@
+
+.main-wrapper {
+  padding:50px;
+  border: 1px blueviolet solid;
+}
+
+.game-header {
+  height: 200px;
+  border:1px red solid;
+}
+
+.game-display {
+  height: 400px;
+  border: 1px red solid;
+}
+
+.game-description {
+  height: 100px;
+  border: 1px red solid;
+}
+
+.game-stats {
+  height: 100px;
+  border: 1px red solid;
+}
