@@ -20,7 +20,15 @@ function reset() {
   $('.box').removeClass('X');
   $('.box').removeClass('O');
   $('.box').attr("onclick","addGamePiece(this)");
-  document.querySelector('.player-1').style.fontSize="initial";
+  document.querySelector('.player-1').style.fontSize= "initial";
+  document.querySelector('.player-2').style.fontSize= "initial";
+  document.querySelector('.game-over').style.display = "none";
+  let gameResetStyle = {
+    "pointer-events": "initial",
+  }
+  $('.box').css(gameResetStyle);
+  changePlayer();
+  
 }
 
 let playerOneScore = 0;
@@ -76,23 +84,23 @@ function checkForWinner() {
 }
 
 function finishGame(gamePiece) {
+  let gameOverStyle = {
+    "pointer-events": "none",
+  }
+  $('.box').css(gameOverStyle);
+  document.querySelector('.game-over').style.display="flex";
   if (gamePiece === 'X') {
     console.log('Player 1 Wins!')
+    document.querySelector('.declare-winner').innerHTML = "Player 1 Wins!";
     document.querySelector('.player-1').style.fontSize="100px";
     playerOneScore++;
-    updateScore();
   } else {
     console.log('player 2 Wins!');
+    document.querySelector('.declare-winner').innerHTML = "Player 2 Wins!";
     document.querySelector('.player-2').style.fontSize="100px";
     playerTwoScore++;
-    updateScore();
-    let gameOverStyle = {
-      "pointer-events": "none",
-    }
-    $('.box').css(gameOverStyle);
-    document.querySelector('.play-again').style.display="block";
-    // FIXME:
   }
+  updateScore()
 }
 
 
@@ -106,11 +114,20 @@ function isEven(value) {
 
 function changePlayer() {
   if(isEven(turn)) {
+    $('.player-2').addClass('rubberBand');
+    $('.player-1').removeClass('rubberBand');
     document.querySelector('.player-1').style.color="white";
+    $('.player-1').addClass('pulse delay-1s');
     document.querySelector('.player-2').style.color="black";
+    $('.player-2').removeClass('pulse delay-1s')
+
   } else {
+    $('.player-2').removeClass('rubberBand');
+    $('.player-1').addClass('rubberBand');
     document.querySelector('.player-1').style.color="black";
+    $('.player-1').removeClass('pulse delay-1s')
     document.querySelector('.player-2').style.color="white";
+    $('.player-2').addClass('pulse delay-1s');
   }
 }
 
@@ -119,8 +136,10 @@ function changePlayer() {
 function addGamePiece(selectedElement) {
   if(isEven(turn)) {
     gamePiece = 'X'
+    $('#pop-1')[0].play();
   } else {
     gamePiece = 'O';
+    $('#pop-2')[0].play();
   }
 
   console.log(selectedElement);

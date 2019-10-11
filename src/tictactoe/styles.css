@@ -11,16 +11,26 @@ body {
   flex-direction: column;
 }
 
-.play-again {
+.game-over {
   display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 160px;
+  background-color: white;
+  height: 259px;
+  width: 480px;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px #333;
 }
 
 .play-again:hover{
-  color: white;
+  color: #333;
   cursor: pointer;
 }
 
 .game-grid {
+  margin-top: 50px;
   width: 500px;
   height: 500px;
   flex-wrap: wrap;
@@ -61,24 +71,29 @@ body {
 
 .X {
   background-color: rgba(127, 255, 0, .6);
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 .O {
   background-color: rgb(147, 147, 248);
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 .scoreboard {
   margin-top: 40px;
 }
 .player {
-  transition: color 300ms,                     font-size 2s,
+  transition: color 300ms 1s,                     font-size 2s,
               transform 2s;
 }
 .player-1 {
   color: white;
   background-color: rgba(127, 255, 0, .6)
+}
+
+.player-active {
+  color: white;
+  text-shadow: 1px 1px 3px #343
 }
 
 .player-2 {
@@ -90,10 +105,14 @@ body {
   display: flex;
   width:100%;
   justify-content:center;
+  margin-bottom: 100px;
 }
 
 .player-display {
   display: flex;
   flex-direction: column;
   margin: 0 40px;
+  padding: 0px 50px;
+  border-radius: 20px;
+  text-shadow: 1px 1px 3px #343;
 }
