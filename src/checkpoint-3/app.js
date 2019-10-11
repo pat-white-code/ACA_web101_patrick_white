@@ -22,18 +22,17 @@ let gameDisplay = $('.game-display');
 clutterBox.css('backgroundColor', 'yellow');
 
 //create a falling box every 3 seconds
-const interval = setInterval(function() {
-  let newBox = "<div class='clutter-box'></div>";
-  gameDisplay.append(newBox);
+// const interval = setInterval(function() {
+//   let newBox = "<div class='clutter-box'></div>";
+//   gameDisplay.append(newBox);
 
-}, 3000);
-clearInterval(interval);
+// }, 3000);
+// clearInterval(interval);
 
-//clutter-box-generator:
+function refreshData()
+{
+  x = 3;  // 5 Seconds
 
-gameDisplay.on('click', ()=>{
-
-  //deletes previous block:
   gameDisplay.empty();
 
   //creates new clutter-box:
@@ -42,8 +41,30 @@ gameDisplay.on('click', ()=>{
   let newBox = $("<div class='clutter-box'></div>");
   newBox.addClass(randomPosition);
   newBox.addClass(randomColor);
+  newBox.on('click', ()=> {
+    newBox.remove();
+  })
   gameDisplay.append(newBox);
-})
+
+  setTimeout(refreshData, x*1000);
+}
+refreshData(); // execute function
+
+//clutter-box-generator:
+
+// gameDisplay.on('click', ()=>{
+
+//   //deletes previous block:
+//   gameDisplay.empty();
+
+//   //creates new clutter-box:
+//   let randomColor = pickRandom(colorsArray);
+//   let randomPosition = pickRandom(positionArray);
+//   let newBox = $("<div class='clutter-box'></div>");
+//   newBox.addClass(randomPosition);
+//   newBox.addClass(randomColor);
+//   gameDisplay.append(newBox);
+// })
 
 clutterBox.on('click', ()=> {
   clutterBox.remove();
