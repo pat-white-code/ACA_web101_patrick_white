@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.typekit.net/yaz8fiw.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./contact.css">
+  <title>Radio Cofefe</title>
+</head>
+<body>
+  <div class="main-wrapper">
+    <nav class="nav-section">
+      <img class="nav-logo" src="img/RCB+LOGO+WHITE+THICKER.png">
+      <div class="hamburger-container">
+        <div class="hamburger-wrapper" onclick="toggleMenu(this); openNav()">
+          <div class="hamburger-line line-1"></div>
+          <div class="hamburger-line line-2"></div>
+          <div class="hamburger-line line-3"></div>
+        </div>
+      </div>
+    </nav>
+    <div class="side-nav-mobile">
+      <a href="./checkpoint-2.html">Home</a>
+      <a href="./coffee.html">Coffee</a>
+      <a href="#">Food</a>
+      <a href="#">Events</a>
+      <a href="#">Store</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+    <header class="header-section contact-bg parallax">
+      <div class="header-nav">
+        <div class="logo-col">
+          <img src="./img/RCB+LOGO+WHITE+THICKER.png">
+        </div>
+        <div class="nav-col">
+          <ul>
+            <li><a href="./checkpoint-2.html">Home</a></li>
+            <li><a href="./coffee.html">Coffee</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-text-container"></div>
+    </header>
+    <section class="contact-section">
+      <div class="form-popup">
+          <div class="container">
+            <form action="action_page.php">
+              <div class = "form-header">
+                <h1>Say Hello!</h1>
+                <p class="close-button" onclick="closeForm()">X</p>
+              </div>
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Enter Your Email" required>
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-col col-1">
+            <h1>RADIO COFFEE & BEER IS LOCATED AT</h1>
+            <p>4204 Manchaca Road, Austin, TX</p>
+            <p>•</p>
+            
+            <h1>HOURS</h1>
+            <p>Mon – Fri 6:30am-Midnight <br/>
+              Sat & Sun 7:30am – Midnight
+            </p>
+        </div>
+        <div class="contact-col col-2">
+            <h1>(512) 394-7844</h1>
+            <h1>radiocoffeeandbeer@gmail.com</h1>
+            <button class="contact-button" onclick="openForm()">CONTACT</button>
+            
+        </div>
+      </div>
+
+
+    </section>
+    <footer class="footer-section">
+      <div class="social-row-wrapper">
+        <div class="social-container">
+          <img class="social-item" src="img/instagram.svg">
+          <img class="social-item" src="./img/twitter.svg">
+          <img class="social-item" src="./img/facebook-1.svg">
+        </div>
+      </div>
+      <div class="footer-text-wrapper">
+        <div class="footer-text-container container-1">
+            <p>Radio Coffee & Beer</p>
+            <p>4204 Manchaca Road, Austin, TX</p>
+        </div>
+        <div class="footer-text-container container-2">
+            <p>(512) 394-7844</p>
+            <p>radiocoffeeandbeer@gmail.com</p>
+        </div>
+      </div>
+      <div class="website-credits">
+          <p>Website Photography by <a href="">Michael-Shaffer</a> & <a href="">Jenn Hair</a></p>
+      </div>
+    </footer>
+</div>
+</body>
+<script src="checkpoint-2.js"></script>
+</html>

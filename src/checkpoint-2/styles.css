@@ -1,0 +1,535 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #333;
+  color: #eefcfa;
+  font-family: 'Anton', sans-serif;
+}
+
+.main-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.nav-section {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.nav-logo {
+  height: 100%;
+}
+
+.hamburger-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.hamburger-wrapper {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  background-color: rgba(250, 250, 250, 0.8);
+  margin: 6px;
+  width: 100%;
+  height: 5px;
+  transition: 300ms;
+}
+
+.change .line-1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .line-2 {
+  opacity: 0;
+}
+
+.change .line-3 {
+  transform: rotate(-134deg) translate(8px, 8px);
+}
+
+.side-nav-mobile {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 15px;
+  /* Desktop: padding-top: 60px */
+  transition: 300ms;
+  font-family: prohibition, sans-serif;
+}
+
+.open {
+  width: 300px;
+}
+
+.side-nav-mobile a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  /* DESKTOP font-size: 25px; */
+  font-size: 32px;
+  color: #818181;
+  display: block;
+  transition: .3s;
+}
+
+.side-nav-mobile a:hover{
+  color: #F1f1f1;
+}
+
+.side-nav-mobile .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.header-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 30px;
+  font-family: prohibition, sans-serif;
+}
+
+.header-nav {
+  display: none;
+}
+
+.bg::after {
+  background-image: url(./img/coffee-shop.jpg);
+  background-size: cover;
+  background-position-x: -223px;
+  background-color: black;
+  opacity: .8;
+  background-position: center;
+}
+
+.parallax::after {
+  content: '';
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index:-1; 
+  transform: translateZ(-1px) scale(1.5);
+  
+}
+
+.features-section {
+  height:500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  height:50%;
+  width: 50%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: prohibition, sans-serif;
+}
+
+.feature-card h1 {
+  font-size: 32px;
+}
+
+.coffee {
+  background-image: url(./img/coffee-mug.jpg);
+  background-position-x: -77px;
+}
+
+.cocktails {
+  background-image: url(./img/cocktails.jpg);
+  background-size: 150%;
+  background-position: center;
+}
+
+.beer {
+  background-image: url(./img/beer.jpg);
+}
+
+.events {
+  background-image: url(./img/events.jpg);
+}
+
+.calendar-section {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-card {
+  width: 90%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+}
+
+.image-column {
+  width: 37%;
+}
+
+/* TODO: Create a good image wrapper so that all images have same dimensions and crop properly */
+
+/* .event-img-wrapper {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+} */
+
+.event-img {
+  width: 100%;
+}
+
+.description-column {
+  display: flex;
+  flex-direction: column;
+  width: 63%;
+  padding: 0px 0px 9px 20px;
+}
+
+.event-title {
+  font-size: 1.3em;
+  margin-block-end: 1em;
+  line-height: 1.3em;
+  font-family: amplitude-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.event-description {
+  line-height: 1.4em;
+  margin: 0px 0 20px 0;
+  font-weight: 100;
+  font-family: amplitude-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.event-date-time {
+  justify-self: flex-end;
+  font-size: .7em;
+  opacity: .7;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.food-truck-section {
+  height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food-truck-item {
+  height: 50%;
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  opacity: .8;
+}
+
+.veracruz-text {
+  background-image: url(./img/veracruz-text.jpg);
+}
+
+.veracruz-img {
+  background-image: url(./img/veracruz-img.jpg);
+}
+
+.deedee-img {
+  background-image: url(./img/deedee-img.jpg);
+}
+
+.deedee-text {
+  background-image: url(./img/deedee-text.jpg);
+}
+
+.hours-location-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  padding: 60px;
+}
+
+.logo-circle {
+  width: 90%;
+  margin-top: 25px;
+}
+
+.hours-location-section h1 {
+  font-size:18px;
+  color: rgb(240, 234, 234);
+  font-family: fatfrank, arial;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: .01em;
+  line-height: 1.4em;
+  text-transform: uppercase;
+
+}
+
+.hours-location-section h3 {
+  font-weight: 100;
+  font-size: 15px;
+  font-family: arial;
+  margin: 5px 0;
+  color: rgb(227, 227, 227);
+}
+/* ____________FOOTER_______________ */
+
+.footer-section {
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255,255,255);
+  align-items: center;
+  font-family: amplitude-condensed, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.social-row-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-container {
+  width: 52%;
+  height: 70%;
+  opacity: .8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+
+.social-container:hover > .social-item{
+  opacity: .5;
+}
+
+.social-item {
+  height: 65%;
+  transition: .2s;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.social-container:hover > .social-item:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.footer-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  width: 90%;
+}
+
+.footer-text-container {
+  height: 50%;
+  padding: 20px 10px;
+}
+
+.footer-text-container p, .website-credits p {
+  font-size: 10px;
+  line-height: 2em;
+  color: rgba(28,28,28,.71);
+}
+
+.container-2 {
+  text-align: end;
+}
+
+.website-credits {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.website-credits a {
+  color: rgba(28,28,28,1);
+  transition: 300ms;
+  text-decoration: none;
+}
+
+.website-credits a:hover {
+  color: rgba(28,28,28,.71);
+}
+
+@media(min-width: 768px) {
+
+  .nav-section {
+    display: none;
+  }
+
+  .header-section {
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: flex-start;
+  }
+
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+  }
+
+  .logo-col {
+    width: 40%;
+    height: 100%;
+  }
+
+  .logo-col img {
+    height: 100%;
+  }
+
+  .nav-col {
+    width: 60%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-col ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    text-shadow: none;
+  }
+
+  .nav-col ul:hover > li {
+    opacity: .5;
+  }
+
+  .nav-col ul:hover > li:hover {
+    opacity: 1;
+    /* transform: scale(1.05); */
+    /* text-shadow: 0 0px 6px #333; */
+  }
+
+  .nav-col li {
+    list-style: none;
+    display: inline-block;
+    transition: .2s;
+  }
+  .nav-col a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 22px;
+  }
+
+  .header-text-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .header-text-container h1 {
+  line-height: 2em;
+  margin-left: 50px;
+  }
+
+  .bg::after {
+    background-image: url(./img/coffee-shop.jpg);
+    background-size: 150%;
+  }
+  
+  .feature-card {
+    width: 25%;
+    height: 100%;
+  }
+
+  .features-section {
+    height: 250px;
+  }
+
+  .event-card {
+    width: 70%;
+    /* margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif; */
+  }
+
+  .food-truck-section {
+    height: 200px;
+    /* display: flex; */
+    flex-wrap: nowrap;
+  }
+  
+  .food-truck-item {
+    height: 100%;
+    width: 25%;
+    /* background-size: cover; */
+  }
+
+  .logo-circle {
+    width: 100px;
+  }
+
+  .footer-section {
+    padding: 45px;
+  }
+
+  .social-container {
+    width: 22%;
+    /* height: 90%; MOBILE*/
+  }
+
+  .footer-text-wrapper {
+    flex-direction: row;
+    width: 60%;
+  }
+
+  .footer-text-container {
+    height: 100%;
+    width: 50%;
+    /* padding: 20px 10px; */
+  }
+
+  .footer-text-container p, .website-credits p {
+    font-size: 16px;
+    line-height: 2em;
+  }
+
+}
