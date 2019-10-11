@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Mansalva', cursive;
+  height: 100%;
+  width: 100%;
+}
+.main-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(160deg,#00f6ff,#62ebef,#85e0df,#9dd5cf,#b0cabf,#bfbeaf,#cbb3a0,#d5a791,#de9a82,#e58e73,#ec8064,#f17156,#f56147,#f94e39,#fc362a,#ff001b);
+}
+.todo-container {
+  min-height: 450px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 26px;
+  background: white;
+  box-shadow: 9px 13px 12px 6px #0000001f;
+}
+.todo-container--header {
+  text-align: center;
+  flex: 1;
+  border-radius: 26px 26px 0 0;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12156862745098039);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-container--header h2 {
+  text-transform: uppercase;
+  color: #222;
+}
+.todo-container--body {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+.todo-container--body .todo-add {
+  justify-self: flex-end;
+}
+.todo-add input {
+  height: 40px;
+  width: 200px;
+  font-size: 1.3em;
+}
