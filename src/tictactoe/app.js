@@ -20,6 +20,7 @@ function reset() {
   $('.box').removeClass('X');
   $('.box').removeClass('O');
   $('.box').attr("onclick","addGamePiece(this)");
+  document.querySelector('.player-1').style.fontSize="initial";
 }
 
 let playerOneScore = 0;
@@ -44,37 +45,28 @@ let gamePiece;
 // find a winner via 3 in a row
 function checkForWinner() {
   if(box1.classList.contains(gamePiece) && box2.classList.contains(gamePiece) && box3.classList.contains(gamePiece)) {
-    console.log('YOU WIN!')
     finishGame(gamePiece);
   } else if ((box1.classList.contains(gamePiece) && box4.classList.contains(gamePiece) && box7.classList.contains(gamePiece))) {
-    console.log('YOU WIN!')
     finishGame(gamePiece);
   } else if (box1.classList.contains(gamePiece) && box5.classList.contains(gamePiece) && box9.classList.contains(gamePiece)) {
-    console.log('YOU WIN!')
     finishGame(gamePiece);
     // BOX 1 WIN SCENARIOS
   } else if (box2.classList.contains(gamePiece) && box5.classList.contains(gamePiece) && box8.classList.contains(gamePiece)) {
-    console.log('YOU WIN!')
     finishGame(gamePiece);
     //BOX 2 WIN SCENARIOS
   } else if (box1.classList.contains(gamePiece) && box5.classList.contains(gamePiece) && box9.classList.contains(gamePiece)) {
-    console.log('YOU WIN!')
     finishGame(gamePiece);
   } else if (box3.classList.contains(gamePiece) && box6.classList.contains(gamePiece) && box9.classList.contains(gamePiece)) {
-    console.log('YOU WIN!')
     finishGame(gamePiece);
   } else if (box3.classList.contains(gamePiece) && box5.classList.contains(gamePiece) && box7.classList.contains(gamePiece)) {
-    console.log('YOU WIN!')
     finishGame(gamePiece);
     //BOX 3 WIN SCENARIOS
 
     //BOX 4 WIN SCENARIOS
   } else if (box4.classList.contains(gamePiece) && box5.classList.contains(gamePiece) && box6.classList.contains(gamePiece)) {
-    console.log('YOU WIN!')
     finishGame(gamePiece);
     //BOX 5 WIN SCENARIOS
   } else if (box7.classList.contains(gamePiece) && box8.classList.contains(gamePiece) && box9.classList.contains(gamePiece)) {
-    console.log('YOU WIN!')
     finishGame(gamePiece);
   } else {
     turn++;
@@ -94,6 +86,12 @@ function finishGame(gamePiece) {
     document.querySelector('.player-2').style.fontSize="100px";
     playerTwoScore++;
     updateScore();
+    let gameOverStyle = {
+      "pointer-events": "none",
+    }
+    $('.box').css(gameOverStyle);
+    document.querySelector('.play-again').style.display="block";
+    // FIXME:
   }
 }
 

@@ -12,7 +12,7 @@ body {
 }
 
 .play-again {
-
+  display: none;
 }
 
 .play-again:hover{
