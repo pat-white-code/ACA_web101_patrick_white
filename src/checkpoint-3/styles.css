@@ -36,6 +36,8 @@
   animation-name: falling;
   animation-duration: 5s;
   animation-fill-mode: both;
+  background-size: cover;
+  
 }
 
 /* creates position classes to ba assigned via js */
@@ -83,10 +85,10 @@
 /* Creates color classes for JS */
 
 .coral {
-  background-color: coral;
+  background-image: url('./img/clutter.jpeg');
 }
 .dark-olive-green {
-  background-color: darkolivegreen;
+  background-image: url(./img/old-clothes.webp);
 }
 .dim-grey {
   background-color: dimgrey;
