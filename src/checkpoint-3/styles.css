@@ -55,11 +55,11 @@
 }
 
 @keyframes falling {
-  from{
+  0%{
     transform: translateY(-100px);
   }
 
-  to {
+  100% {
     transform: translateY(500px);
   }
 }
