@@ -12,6 +12,11 @@
 .game-display {
   height: 400px;
   border: 1px red solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "1 2 3 4 5";
+  overflow:hidden;
 }
 
 .game-description {
@@ -22,4 +27,24 @@
 .game-stats {
   height: 100px;
   border: 1px red solid;
+}
+
+.clutter-box {
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  grid-column: 2;
+  animation-name: falling;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+}
+
+@keyframes falling {
+  from{
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(500px);
+  }
 }
