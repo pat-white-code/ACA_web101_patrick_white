@@ -5,67 +5,58 @@ const positionArray = ['position-1', 'position-2', 'position-3', 'position-4', '
 
 const colorsArray = ['coral', 'dark-olive-green', 'dim-grey'];
 
-
+//Creates function to pick random item from array
 function pickRandom(array) {
   arrayLength = array.length
   randomIndex = Math.floor(Math.random()*arrayLength);
   return array[randomIndex];
 }
 
-console.log(pickRandom(positionArray));
-
 //declare variables
 let clutterBox = $('.clutter-box');
 let gameDisplay = $('.game-display');
 
+//Set game starting stats
+
+//User starts out with 5 Healther
+let userHealth = 5;
+
+//User starts game with 0 points
+let userScore = 0;
+
 //testing JQUERY
 clutterBox.css('backgroundColor', 'yellow');
 
-//create a falling box every 3 seconds
-// const interval = setInterval(function() {
-//   let newBox = "<div class='clutter-box'></div>";
-//   gameDisplay.append(newBox);
 
-// }, 3000);
-// clearInterval(interval);
-
+//CREATES TIMED CLUTTER-DROPS
 function refreshData()
 {
   x = 3;  // 5 Seconds
 
   gameDisplay.empty();
 
-  //creates new clutter-box:
+  //Sets random color/clutter-type
   let randomColor = pickRandom(colorsArray);
+
+  //sets random position
   let randomPosition = pickRandom(positionArray);
+
+  //creates element
   let newBox = $("<div class='clutter-box'></div>");
+
+  //sets classes from random color/position
   newBox.addClass(randomPosition);
   newBox.addClass(randomColor);
+
+  //When user clicks on clutter, destroy clutter
   newBox.on('click', ()=> {
     newBox.remove();
   })
+
+  //Drops the new clutter-box
   gameDisplay.append(newBox);
 
+  //restart this function every 3 seconds
   setTimeout(refreshData, x*1000);
 }
 refreshData(); // execute function
-
-//clutter-box-generator:
-
-// gameDisplay.on('click', ()=>{
-
-//   //deletes previous block:
-//   gameDisplay.empty();
-
-//   //creates new clutter-box:
-//   let randomColor = pickRandom(colorsArray);
-//   let randomPosition = pickRandom(positionArray);
-//   let newBox = $("<div class='clutter-box'></div>");
-//   newBox.addClass(randomPosition);
-//   newBox.addClass(randomColor);
-//   gameDisplay.append(newBox);
-// })
-
-clutterBox.on('click', ()=> {
-  clutterBox.remove();
-})
