@@ -92,6 +92,8 @@ function clutterMaker()
   })
 
   //Drops the new clutter-box
+
+// FIXME: 'animationend' event happens when animation starts. why???
   gameDisplay.append(newBox);
   newBox.on('animationend', loseHealth());
   newBox.on('animationend', ()=>{
