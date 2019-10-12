@@ -8,10 +8,35 @@
 .game-header {
   height: 200px;
   border:1px red solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: continuo, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 30px 0;
+}
+
+.game-header h1 {
+  font-size: 4.6em;
+  letter-spacing: 11px;
+}
+
+.game-description {
+  padding:20px;
+  border: 1px red solid;
+}
+
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  border: 1px red solid;
 }
 
 .game-display {
-  height: 400px;
+  height: 500px;
   border: 1px red solid;
   perspective: 100px;
   display: grid;
@@ -20,17 +45,15 @@
   overflow:hidden;
   background-image: url(./img/clean-house.jpg);
   background-size: cover;
-  z-index: -4;
-}
+  background-position: center;
+  width: 80%;
 
-.game-description {
-  height: 50px;
-  border: 1px red solid;
 }
 
 .game-stats {
   border: 1px red solid;
   display: flex;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .stat-col-left {
@@ -41,7 +64,7 @@
   border: 1px blue solid;
 }
 
-.user-health-section {
+.game-stat-section {
   display: flex;
   border: 1px black solid;
 }
@@ -58,7 +81,7 @@
   padding: 0px 20px;
 }
 
-.user-score-section {
+.score-section {
   display: flex;
   border: 1px black solid;
 }

@@ -66,7 +66,7 @@ clutterBox.css('backgroundColor', 'yellow');
 //CREATES TIMED CLUTTER-DROPS
 function clutterMaker()
 {
-  x = 10;  // Sets repeated timer for clutter-maker in Seconds
+  x = 5;  // Sets repeated timer for clutter-maker in Seconds
 
   // gameDisplay.empty(); // Clears game display if needed.
 
@@ -95,7 +95,6 @@ function clutterMaker()
 
 // FIXME: 'animationend' event happens when animation starts. why???
   gameDisplay.append(newBox);
-  newBox.on('animationend', loseHealth());
   newBox.on('animationend', ()=>{
     newBox.remove();
   })
