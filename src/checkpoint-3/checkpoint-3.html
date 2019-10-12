@@ -12,7 +12,7 @@
   <div class="main-wrapper">
     <div class="game-header"></div>
     <div class="game-display">
-      <div class="clutter-box 1"></div>
+      <!-- <div class="clutter-box 1"></div> -->
     </div>
     <div class="game-description"></div>
     <div class="game-stats">
@@ -22,7 +22,7 @@
             <h1>Closet Space : </h1>
           </div>
           <div class="health-display">
-            <h1 class="user-health">5</h1>
+            <h1 id="health-display"></h1>
           </div>
         </div>
         <div class="user-score-section">
@@ -30,11 +30,13 @@
             <h1>Clutters Busted : </h1>
           </div>
           <div class="score-display">
-            <h1 class="user-score">0</h1>
+            <h1 id="score-display"></h1>
           </div>
         </div>
       </div>
-      <div class="stat-col-right"></div>
+      <div class="stat-col-right">
+        <h1 id="start" onclick="clutterMaker()">Start Game</h1>
+      </div>
     </div>
   </div>
   <script src="./jquery.js"></script>

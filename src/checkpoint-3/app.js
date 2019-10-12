@@ -15,25 +15,60 @@ function pickRandom(array) {
 //declare variables
 let clutterBox = $('.clutter-box');
 let gameDisplay = $('.game-display');
+let healthDisplay = $('#health-display');
+let scoreDisplay = $('#score-display');
 
 //Set game starting stats
 
-//User starts out with 5 Healther
-let userHealth = 5;
+// console.log('user score: ', userScore)
+
+// console.log(userScore.html());
+
+//User starts out with 5 Health
+let userHealth = 5
+
+//sets userHealth in display
+healthDisplay.html(userHealth);
+
+//function for user loses one health
+function loseHealth(){
+  userHealth--;
+  console.log('userHealth : ', userHealth);
+  updateHealthDisplay();
+}
+
+function updateHealthDisplay(){
+  healthDisplay.html(userHealth);
+}
+
+//User starts out with 0 points
+let userScore = 0;
 
 //User starts game with 0 points
-let userScore = 0;
+scoreDisplay.html(userScore);
+
+//Function for updating score 
+function updateScore() {
+  userScore++;
+  console.log(userScore);
+  updateScoreDisplay();
+}
+
+//update score display 
+function updateScoreDisplay() {
+  scoreDisplay.html(userScore);
+}
 
 //testing JQUERY
 clutterBox.css('backgroundColor', 'yellow');
 
 
 //CREATES TIMED CLUTTER-DROPS
-function refreshData()
+function clutterMaker()
 {
-  x = 3;  // 5 Seconds
+  x = 10;  // Sets repeated timer for clutter-maker in Seconds
 
-  gameDisplay.empty();
+  // gameDisplay.empty(); // Clears game display if needed.
 
   //Sets random color/clutter-type
   let randomColor = pickRandom(colorsArray);
@@ -47,16 +82,25 @@ function refreshData()
   //sets classes from random color/position
   newBox.addClass(randomPosition);
   newBox.addClass(randomColor);
+  newBox.addClass('falling');
 
   //When user clicks on clutter, destroy clutter
   newBox.on('click', ()=> {
+    newBox.removeAttr('animationend');
     newBox.remove();
+    updateScore();
   })
 
   //Drops the new clutter-box
   gameDisplay.append(newBox);
+  newBox.on('animationend', loseHealth());
+  newBox.on('animationend', ()=>{
+    newBox.remove();
+  })
 
   //restart this function every 3 seconds
-  setTimeout(refreshData, x*1000);
+  setTimeout(clutterMaker, x*1000);
 }
-refreshData(); // execute function
+
+
+//clutterMaker(); // execute function
