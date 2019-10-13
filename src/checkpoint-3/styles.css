@@ -242,3 +242,18 @@ body {
     transform: translateY(500px) rotate(1000deg);
   }
 }
+
+@media(max-width:375px) {
+  body {background-color:grey;}
+
+  #game-start {
+    width: 100%;
+    left:0;
+  }
+
+  .game-header{
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 6px;
+  }
+}
