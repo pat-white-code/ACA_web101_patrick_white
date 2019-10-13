@@ -145,7 +145,8 @@
 
 .falling {
   animation-name: falling;
-  animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
   /* animation-fill-mode: both; */
 }
