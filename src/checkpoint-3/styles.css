@@ -75,6 +75,23 @@
   padding: 0px 20px;
 }
 
+.yardsale {
+  background-color: hsl(120, 61%, 80%);
+  font-style: italic;
+  color: rgba(0,0,0,.4);
+  border-radius: 10px;
+}
+
+.yardsale.active {
+  background-color: hsl(120, 61%, 50%);
+  font-style: normal;
+  color: rgba(0,0,0,1)
+}
+
+.yardsale.active:hover {
+  cursor: pointer;
+}
+
 .health-display {
   display: flex;
   border: 1px blue solid;
@@ -106,10 +123,6 @@
   border: 1px blue solid;
   justify-content: center;
   align-items: center;
-}
-
-.yardsale:hover {
-  cursor: pointer;
 }
 
 .clutter-box {

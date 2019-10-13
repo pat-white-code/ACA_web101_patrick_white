@@ -17,7 +17,8 @@ let clutterBox = $('.clutter-box');
 let gameDisplay = $('.game-display');
 let healthDisplay = $('#health-display');
 let scoreDisplay = $('#score-display');
-let moneyDisplay = $('#money-display')
+let moneyDisplay = $('#money-display');
+let yardsale = $('#yardsale');
 
 //Set game starting stats
 
@@ -45,6 +46,24 @@ function hostYardsale() {
   updateScoreDisplay();
   userMoney = userMoney + 10;
   updateMoneyDisplay();
+  checkIfYardsale();
+}
+
+//function for checking if yardsale is possible.
+function checkIfYardsale() {
+  //if user has more than 5 points, allow yard sale
+  if(userScore >= 1) {
+    allowYardsale();
+  } else {
+    // remove properties previously set by allow yard sale
+    yardsale.removeClass('active');
+    yardsale.removeAttr('onclick');
+  }
+}
+
+function allowYardsale() {
+  yardsale.addClass('active');
+  yardsale.on('click', hostYardsale());
 }
 
 //function for user loses one health
@@ -64,6 +83,11 @@ function updateMoneyDisplay(){
   moneyDisplay.html(userMoney);
 }
 
+//update score display 
+function updateScoreDisplay() {
+  scoreDisplay.html(userScore);
+}
+
 //User starts out with 0 points
 let userScore = 0;
 
@@ -75,20 +99,8 @@ function updateScore() {
   userScore++;
   console.log(userScore);
   updateScoreDisplay();
+  checkIfYardsale();
 }
-
-function hostYardSale() {
-
-}
-
-//update score display 
-function updateScoreDisplay() {
-  scoreDisplay.html(userScore);
-}
-
-//testing JQUERY
-clutterBox.css('backgroundColor', 'yellow');
-
 
 //CREATES TIMED CLUTTER-DROPS
 function clutterMaker()
@@ -119,7 +131,6 @@ function clutterMaker()
   })
 
   //Drops the new clutter-box
-
 // FIXME: 'animationend' event happens when animation starts. why???
   gameDisplay.append(newBox);
   newBox.on('animationend', ()=>{
