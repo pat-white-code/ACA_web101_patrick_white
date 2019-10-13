@@ -64,12 +64,12 @@
   border: 1px blue solid;
 }
 
-.game-stat-section {
+.game-stat-section, .yardsale-section {
   display: flex;
   border: 1px black solid;
 }
 
-.health-header {
+.health-header, .yardsale {
   display: flex;
   border: 1px red solid;
   padding: 0px 20px;
@@ -81,12 +81,12 @@
   padding: 0px 20px;
 }
 
-.score-section {
+.score-section, .money-section {
   display: flex;
   border: 1px black solid;
 }
 
-.score-header {
+.score-header, .money-header {
   display: flex;
   border: 1px red solid;
   padding: 0px 20px;
@@ -106,6 +106,10 @@
   border: 1px blue solid;
   justify-content: center;
   align-items: center;
+}
+
+.yardsale:hover {
+  cursor: pointer;
 }
 
 .clutter-box {

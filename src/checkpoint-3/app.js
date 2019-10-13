@@ -17,6 +17,7 @@ let clutterBox = $('.clutter-box');
 let gameDisplay = $('.game-display');
 let healthDisplay = $('#health-display');
 let scoreDisplay = $('#score-display');
+let moneyDisplay = $('#money-display')
 
 //Set game starting stats
 
@@ -24,11 +25,27 @@ let scoreDisplay = $('#score-display');
 
 // console.log(userScore.html());
 
+//
+
 //User starts out with 5 Health
 let userHealth = 5
 
+//User starts out with $0
+let userMoney = 0;
+
+//Initializes money display
+moneyDisplay.html('$' + userMoney);
+
 //sets userHealth in display
 healthDisplay.html(userHealth);
+
+//function for hosting yardsale
+function hostYardsale() {
+  userScore = userScore - 5;
+  updateScoreDisplay();
+  userMoney = userMoney + 10;
+  updateMoneyDisplay();
+}
 
 //function for user loses one health
 function loseHealth(){
@@ -37,8 +54,14 @@ function loseHealth(){
   updateHealthDisplay();
 }
 
+//function for updating health display
 function updateHealthDisplay(){
   healthDisplay.html(userHealth);
+}
+
+//function for updating money display:
+function updateMoneyDisplay(){
+  moneyDisplay.html(userMoney);
 }
 
 //User starts out with 0 points
@@ -52,6 +75,10 @@ function updateScore() {
   userScore++;
   console.log(userScore);
   updateScoreDisplay();
+}
+
+function hostYardSale() {
+
 }
 
 //update score display 
