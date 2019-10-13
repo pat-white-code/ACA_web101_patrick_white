@@ -82,6 +82,16 @@
   border-radius: 10px;
 }
 
+.yardsale-allower {
+  z-index:-100;
+}
+
+.yardsale-allower.active {
+  z-index: 1;
+}
+
+
+
 .yardsale.active {
   background-color: hsl(120, 61%, 50%);
   font-style: normal;

@@ -19,6 +19,7 @@ let healthDisplay = $('#health-display');
 let scoreDisplay = $('#score-display');
 let moneyDisplay = $('#money-display');
 let yardsale = $('#yardsale');
+let yardsaleAllowed = $('#yardsale-allower');
 
 //Set game starting stats
 
@@ -42,28 +43,35 @@ healthDisplay.html(userHealth);
 
 //function for hosting yardsale
 function hostYardsale() {
-  userScore = userScore - 5;
+  if(userScore >= 1 ) {
+  console.log('hosting yard sale');
+  userScore = userScore - 1;
   updateScoreDisplay();
-  userMoney = userMoney + 10;
+  userMoney = userMoney + 1;
   updateMoneyDisplay();
   checkIfYardsale();
+  } else {
+    return;
+  } 
+  // checkIfYardsale();
 }
 
 //function for checking if yardsale is possible.
 function checkIfYardsale() {
+  console.log('checking if yard sale...')
   //if user has more than 5 points, allow yard sale
   if(userScore >= 1) {
-    allowYardsale();
+    console.log('yard sale is allowed..')
+    yardsale.addClass('active')
   } else {
+    console.log('yardsale not allowed...')
     // remove properties previously set by allow yard sale
     yardsale.removeClass('active');
-    yardsale.removeAttr('onclick');
   }
 }
 
 function allowYardsale() {
   yardsale.addClass('active');
-  yardsale.on('click', hostYardsale());
 }
 
 //function for user loses one health
