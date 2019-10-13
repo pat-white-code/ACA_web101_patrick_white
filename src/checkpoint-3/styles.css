@@ -1,4 +1,8 @@
 
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .main-wrapper {
   padding:50px;
   border: 1px blueviolet solid;
@@ -47,7 +51,31 @@
   background-size: cover;
   background-position: center;
   width: 80%;
+  background-blend-mode: normal;
+}
 
+.game-display.inactive {
+  background-color:#333;
+  background-blend-mode: difference;
+}
+
+#game-start {
+  background-color: white;
+  height: 140px;
+  width: 300px;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 7px #555;
+}
+#game-start:hover{
+  cursor: pointer;
+  background-color: rgb(240, 240, 240);
 }
 
 .game-stats {
@@ -64,7 +92,7 @@
   border: 1px blue solid;
 }
 
-.game-stat-section, .yardsale-section {
+#game-stat-section, .yardsale-section {
   display: flex;
   border: 1px black solid;
 }
@@ -108,7 +136,7 @@
   padding: 0px 20px;
 }
 
-.score-section, .money-section {
+#score-section, #money-section {
   display: flex;
   border: 1px black solid;
 }

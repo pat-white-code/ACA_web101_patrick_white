@@ -4,11 +4,15 @@ console.log('hello!');
 //declare variables
 let clutterBox = $('.clutter-box');
 let gameDisplay = $('.game-display');
+let gameStart = $('#game-start');
 let healthDisplay = $('#health-display');
+let scoreSection = $('#score-section');
 let scoreDisplay = $('#score-display');
 let moneyDisplay = $('#money-display');
+let moneySection = $('#money-section');
 let yardsale = $('#yardsale');
 let yardsaleAllowed = $('#yardsale-allower');
+let healthSection = $('#game-stat-section');
 
 
 //Arrays of classes for use with pickRandom() and makeClutter(). styled in styles.css
@@ -22,6 +26,14 @@ function pickRandom(array) {
   randomIndex = Math.floor(Math.random()*arrayLength);
   return array[randomIndex];
 }
+
+//Creates function for animating elements
+function animateElement($element, animationName, animationSpeed) {
+  $element.addClass('animated' + ' ' + animationName + ' ' + animationSpeed);
+  $element.on('animationend', ()=> {
+    $element.removeClass('animated' + ' ' + animationName + ' ' + animationSpeed)}
+    );
+};
 
 //Set game starting stats and displays
 //User starts out with 5 Health
@@ -77,6 +89,9 @@ function hostYardsale() {
   //Updates money display:
   updateMoneyDisplay();
 
+  //animate money section
+  animateElement(moneySection, 'tada', 'fast');
+
   //See if user still has money for the next yardsale?
   checkIfYardsale();
   } else {
@@ -99,9 +114,11 @@ function checkIfYardsale() {
 
 //function for user loses one health
 function loseHealth(){
+  animateElement(healthSection, 'shake', 'faster');
   userHealth--;
   console.log('userHealth : ', userHealth);
   updateHealthDisplay();
+
 }
 
 //Function for updating score 
@@ -110,13 +127,22 @@ function addPoint() {
   console.log(userScore);
   updateScoreDisplay();
   checkIfYardsale();
+  animateElement(scoreSection, 'bounce', 'fast');
 }
 
 //CREATES TIMED CLUTTER-DROPS
-function clutterMaker()
-{
-  x = 2;  // Sets repeated timer for clutter-maker in Seconds
+function startGame() {
+  //Removes start box from display
+  gameStart.addClass('animated bounceOutLeft');
+  gameStart.on('animationend', ()=>{
+    gameDisplay.removeClass('inactive');
+  })
+  //Starts cluttermaker in 1 seconds
+  setTimeout(clutterMaker, 2000);
+}
 
+function clutterMaker() {
+  x = 3; // Sets repeated timer for clutter-maker in Seconds
   //Sets random color/clutter-type
   let randomColor = pickRandom(colorsArray);
 
