@@ -13,6 +13,11 @@ let moneySection = $('#money-section');
 let yardsale = $('#yardsale');
 let yardsaleAllowed = $('#yardsale-allower');
 let healthSection = $('#game-stat-section');
+let badSound = $('#bad')[0];
+let chaChingSound = $('#cha-ching')[0];
+let wooshPunchSound = $('#woosh-punch')[0];
+let gameStartWoosh = $('#game-start-woosh')[0];
+let gameMusic = $('#game-music')[0];
 
 
 //Arrays of classes for use with pickRandom() and makeClutter(). styled in styles.css
@@ -34,6 +39,11 @@ function animateElement($element, animationName, animationSpeed) {
     $element.removeClass('animated' + ' ' + animationName + ' ' + animationSpeed)}
     );
 };
+
+//playSound function for addPoint, loseHealth and hostYardSale
+function playSound(sound){
+  sound.play();
+}
 
 //Set game starting stats and displays
 //User starts out with 5 Health
@@ -92,6 +102,9 @@ function hostYardsale() {
   //animate money section
   animateElement(moneySection, 'tada', 'fast');
 
+  //soundEffect
+  playSound(chaChingSound);
+
   //See if user still has money for the next yardsale?
   checkIfYardsale();
   } else {
@@ -118,16 +131,18 @@ function loseHealth(){
   userHealth--;
   console.log('userHealth : ', userHealth);
   updateHealthDisplay();
+  playSound(badSound);
 
 }
 
 //Function for updating score 
 function addPoint() {
   userScore++;
-  console.log(userScore);
+  console.log(userScore); //for testing
   updateScoreDisplay();
   checkIfYardsale();
-  animateElement(scoreSection, 'bounce', 'fast');
+  animateElement(scoreSection, 'bounce', 'faster');
+  playSound(wooshPunchSound);
 }
 
 //CREATES TIMED CLUTTER-DROPS
@@ -137,8 +152,13 @@ function startGame() {
   gameStart.on('animationend', ()=>{
     gameDisplay.removeClass('inactive');
   })
+
+  //Play Sound effect
+  playSound(gameStartWoosh);
   //Starts cluttermaker in 1 seconds
   setTimeout(clutterMaker, 2000);
+  //Plays game music
+  playSound(gameMusic);
 }
 
 function clutterMaker() {
