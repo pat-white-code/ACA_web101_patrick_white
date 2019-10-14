@@ -89,7 +89,7 @@ body {
   display: flex;
   font-family: 'Ubuntu', sans-serif;
   background-color: #EEE;
-  padding: 10px 0 20px 0;
+  
 }
 
 /* TODO: .stat-col-left and .stat-col-right are practically identical. refactor to minimize repetition */
