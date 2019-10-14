@@ -84,6 +84,7 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
+/* TODO: .stat-col-left and .stat-col-right are practically identical. refactor to minimize repetition */
 .stat-col-left {
   height: 100%;
   width: 50%;
@@ -95,6 +96,10 @@ body {
 #game-stat-section, .yardsale-section {
   display: flex;
   border: 1px black solid;
+}
+
+#game-stat-section, #score-section, .yardsale-section, #money-section {
+  margin: 10px;
 }
 
 .health-header, .yardsale {
@@ -166,7 +171,6 @@ body {
 .clutter-box {
   height: 100px;
   width: 100px;
-  background-color: green;
   background-size: cover;
   cursor: grab;
 }
@@ -256,4 +260,32 @@ body {
     text-align: center;
     letter-spacing: 6px;
   }
+
+  .clutter-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .game-stats {
+    flex-direction: column;
+  }
+
+  .stat-col-left {
+    width: 100%;
+    height:50%;
+  }
+
+  .stat-col-right {
+    width:100%;
+    height:50%;
+  }
+
+  .health-header h1, .score-header h1, .money-header h1 {
+    font-size: 1.3em;
+}
+  #game-stat-section, #score-section, .yardsale-section, #money-section {
+    margin: 5px 0;
+  }
+
+
 }
