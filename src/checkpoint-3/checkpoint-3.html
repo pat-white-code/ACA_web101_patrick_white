@@ -26,7 +26,7 @@
       <source src="sounds/game-start-woosh.wav" type="audio/mpeg" preload>
     </audio>
     <audio id="game-music">
-      <source src="sounds/" type="audio/mpeg" preload>
+      <source src="sounds/game-music.wav" type="audio/mpeg" preload>
     </audio>
   </div>
   <div class="main-wrapper">
@@ -39,25 +39,25 @@
       </div>
       <div class="game-wrapper">
         <div class="game-display inactive">
-          <div id="game-start" onclick="startGame()"><h1>Click to Start Busting Clutter!</h1></div>
+          <div id="game-start" onclick="startGame()"><h1>Start Game</h1></div>
           <!-- <div class="clutter-box 1"></div> -->
         </div>
       </div>
       <div class="game-stats">
         <div class="stat-col-left">
-          <div id="game-stat-section">
-            <div class="health-header">
+          <div class="section" id="game-stat-section">
+            <div class="header health-header">
               <h1>Closet Space : </h1>
             </div>
-            <div class="health-display animated">
+            <div class="display health-display animated">
               <h1 id="health-display"></h1>
             </div>
           </div>
-          <div id="score-section">
-            <div class="score-header">
+          <div class="section" id="score-section">
+            <div class="header score-header">
               <h1>Clutters Busted : </h1>
             </div>
-            <div class="score-display">
+            <div class="display score-display">
               <h1 id="score-display"></h1>
             </div>
           </div>
@@ -68,11 +68,11 @@
               <h1>Host Yard Sale</h1>
             </div>
           </div>
-            <div id="money-section">
-              <div class="money-header">
+            <div class= "section" id="money-section">
+              <div class="header money-header">
                 <h1>Money Earned : </h1>
               </div>
-              <div class="score-display">
+              <div class="display score-display">
                 <h1 id="money-display"></h1>
               </div>
             </div>
