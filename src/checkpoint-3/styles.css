@@ -6,7 +6,10 @@ body {
 .main-wrapper {
   padding:50px;
   border: 1px blueviolet solid;
+}
 
+.inner-wrapper {
+  background-color: #CCC;
 }
 
 .game-header {
@@ -29,6 +32,7 @@ body {
 .game-description {
   padding:20px;
   border: 1px red solid;
+  background-color: #EEE;
 }
 
 .game-wrapper {
@@ -37,6 +41,7 @@ body {
   align-items:center;
   width: 100%;
   border: 1px red solid;
+  background-color: #EEE;
 }
 
 .game-display {
@@ -82,6 +87,7 @@ body {
   border: 1px red solid;
   display: flex;
   font-family: 'Ubuntu', sans-serif;
+  background-color: #EEE;
 }
 
 /* TODO: .stat-col-left and .stat-col-right are practically identical. refactor to minimize repetition */
@@ -91,6 +97,8 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px blue solid;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 #game-stat-section, .yardsale-section {
@@ -273,6 +281,7 @@ body {
   .stat-col-left {
     width: 100%;
     height:50%;
+    align-items: flex-start;
   }
 
   .stat-col-right {

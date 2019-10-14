@@ -30,43 +30,44 @@
     </audio>
   </div>
   <div class="main-wrapper">
-    <div class="game-header">
-      <h1>Clutter Buster</h1>
-    </div>
-    <div class="game-description">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias beatae consectetur rem porro rerum, esse, culpa nihil optio facere, qui veniam earum! Explicabo, sed. Necessitatibus dolor odit omnis voluptatum facere?</p>
-    </div>
-    <div class="game-wrapper">
-      <div class="game-display inactive">
-        <div id="game-start" onclick="startGame()"><h1>Click to Start Busting Clutter!</h1></div>
-        <!-- <div class="clutter-box 1"></div> -->
+    <div class="inner-wrapper">
+      <div class="game-header">
+        <h1>Clutter Buster</h1>
       </div>
-    </div>
-    <div class="game-stats">
-      <div class="stat-col-left">
-        <div id="game-stat-section">
-          <div class="health-header">
-            <h1>Closet Space : </h1>
-          </div>
-          <div class="health-display animated">
-            <h1 id="health-display"></h1>
-          </div>
-        </div>
-        <div id="score-section">
-          <div class="score-header">
-            <h1>Clutters Busted : </h1>
-          </div>
-          <div class="score-display">
-            <h1 id="score-display"></h1>
-          </div>
+      <div class="game-description">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias beatae consectetur rem porro rerum, esse, culpa nihil optio facere, qui veniam earum! Explicabo, sed. Necessitatibus dolor odit omnis voluptatum facere?</p>
+      </div>
+      <div class="game-wrapper">
+        <div class="game-display inactive">
+          <div id="game-start" onclick="startGame()"><h1>Click to Start Busting Clutter!</h1></div>
+          <!-- <div class="clutter-box 1"></div> -->
         </div>
       </div>
-      <div class="stat-col-right">
-          <div class="yardsale-section">
-                <div class="yardsale" id="yardsale" onclick="hostYardsale()">
-                  <h1>Host Yard Sale</h1>
-                </div>
+      <div class="game-stats">
+        <div class="stat-col-left">
+          <div id="game-stat-section">
+            <div class="health-header">
+              <h1>Closet Space : </h1>
             </div>
+            <div class="health-display animated">
+              <h1 id="health-display"></h1>
+            </div>
+          </div>
+          <div id="score-section">
+            <div class="score-header">
+              <h1>Clutters Busted : </h1>
+            </div>
+            <div class="score-display">
+              <h1 id="score-display"></h1>
+            </div>
+          </div>
+        </div>
+        <div class="stat-col-right">
+          <div class="yardsale-section">
+            <div class="yardsale" id="yardsale" onclick="hostYardsale()">
+              <h1>Host Yard Sale</h1>
+            </div>
+          </div>
             <div id="money-section">
               <div class="money-header">
                 <h1>Money Earned : </h1>
@@ -75,10 +76,11 @@
                 <h1 id="money-display"></h1>
               </div>
             </div>
-          </div>
+        </div>
       </div>
     </div>
   </div>
+</div>
   <script src="./jquery.js"></script>
   <script src="./app.js"></script>
 </body>
