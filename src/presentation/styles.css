@@ -1,0 +1,26 @@
+
+.main-wrapper {
+  padding: 40px;
+  text-align: center;
+}
+
+.square-section {
+  margin: 40px;
+  border: 1px red solid;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sound-square {
+  border: 1px blue solid;
+  width: 100px;
+  height: 100px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sound-square:hover{
+  cursor: pointer;
+}
