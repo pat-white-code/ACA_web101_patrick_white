@@ -194,6 +194,3 @@ function clutterMaker() {
   //restart this function every 3 seconds
   setTimeout(clutterMaker, x*1000);
 }
-
-
-//clutterMaker(); // execute function
