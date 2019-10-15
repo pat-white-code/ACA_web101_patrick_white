@@ -24,3 +24,7 @@
 .sound-square:hover{
   cursor: pointer;
 }
+
+.hidden {
+  display: none;
+}

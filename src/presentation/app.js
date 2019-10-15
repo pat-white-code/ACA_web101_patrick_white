@@ -34,4 +34,6 @@ $square2.on('click', ()=>{
   playSound($pop);
 });
 
-//
+// Step 6 -- preload?
+
+// Step 7 -- loop?
