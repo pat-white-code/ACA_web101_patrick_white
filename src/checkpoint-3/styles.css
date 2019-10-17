@@ -1,0 +1,320 @@
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.main-wrapper {
+  padding:50px;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  /* border: 1px blueviolet solid; */
+}
+
+.inner-wrapper {
+  background-color: #CCC;
+}
+
+.game-header {
+  height: 200px;
+  /* border:1px red solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: continuo, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 30px 0;
+}
+
+.game-header h1 {
+  font-size: 4.6em;
+  letter-spacing: 11px;
+}
+
+.game-description {
+  padding:20px;
+  /* border: 1px red solid; */
+  background-color: #EEE;
+}
+
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  /* border: 1px red solid; */
+  background-color: #EEE;
+}
+
+.game-display {
+  height: 500px;
+  /* border: 1px red solid; */
+  perspective: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  overflow:hidden;
+  background-image: url(./img/clean-house.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  background-blend-mode: normal;
+}
+
+.game-display.inactive {
+  background-color:#333;
+  background-blend-mode: difference;
+}
+
+#game-start {
+  background-color: white;
+  height: 140px;
+  width: 300px;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 7px #555;
+}
+#game-start:hover{
+  cursor: pointer;
+  background-color: rgb(240, 240, 240);
+}
+
+.game-stats {
+  /* border: 1px red solid; */
+  display: flex;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #EEE;
+  
+}
+
+/* TODO: .stat-col-left and .stat-col-right are practically identical. refactor to minimize repetition */
+.stat-col-left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px blue solid; */
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#game-stat-section, .yardsale-section {
+  display: flex;
+  /* border: 1px black solid; */
+}
+
+#game-stat-section, #score-section, .yardsale-section, #money-section {
+  margin: 10px;
+}
+
+.header {
+  background-image: linear-gradient(to top, hsla(234, 100%, 50%, .7), hsla(255, 100%, 50%, .7));
+  color: #EEE;
+}
+
+.display {
+  background-image: linear-gradient(to top, #333, #555);
+  color:#EEE;
+}
+
+.section{
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 4px #555;
+}
+
+.health-header, .yardsale {
+  display: flex;
+  /* border: 1px red solid; */
+  padding: 0px 20px;
+}
+
+.yardsale {
+  background-color: hsl(120, 61%, 80%);
+  font-style: italic;
+  color: rgba(0,0,0,.4);
+  border-radius: 10px;
+}
+
+.yardsale-allower {
+  z-index:-100;
+}
+
+.yardsale-allower.active {
+  z-index: 1;
+}
+
+
+
+.yardsale.active {
+  background-color: hsl(120, 61%, 50%);
+  font-style: normal;
+  color: rgba(0,0,0,1)
+}
+
+.yardsale.active:hover {
+  cursor: pointer;
+}
+
+.health-display {
+  display: flex;
+  /* border: 1px blue solid; */
+  padding: 0px 20px;
+}
+
+#score-section, #money-section {
+  display: flex;
+  /* border: 1px black solid; */
+}
+
+.score-header, .money-header {
+  display: flex;
+  /* border: 1px red solid; */
+  padding: 0px 20px;
+}
+
+.score-display {
+  display: flex;
+  /* border: 1px blue solid; */
+  padding: 0px 20px;
+}
+
+.stat-col-right {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px blue solid; */
+  justify-content: center;
+  align-items: center;
+}
+
+.clutter-box {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  cursor: grab;
+}
+
+.falling {
+  animation-name: falling;
+  animation-timing-function: ease-out;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  /* animation-fill-mode: both; */
+}
+
+/* creates position classes to ba assigned via js */
+
+.position-1 {
+  grid-column: 1/2;
+}
+.position-2 {
+  grid-column: 2/3;
+}
+.position-3 {
+  grid-column: 3/4;
+}
+.position-4 {
+  grid-column: 4/5;
+}
+.position-5 {
+  grid-column: 5/6;
+}
+.position-6 {
+  grid-column: 6/7;
+}
+.position-7 {
+  grid-column: 7/8;
+}
+.position-8 {
+  grid-column: 8/9;
+}
+.position-9 {
+  grid-column: 9/10;
+}
+.position-10 {
+  grid-column: 10/11;
+}
+.position-11 {
+  grid-column: 11/12;
+}
+.position-12 {
+  grid-column: 12/13;
+}
+.position-13 {
+  grid-column: 13/14;
+}
+
+/* Creates color classes for JS */
+
+.coral {
+  background-image: url('./img/clutter.jpeg');
+}
+.dark-olive-green {
+  background-image: url(./img/old-clothes.webp);
+}
+.dim-grey {
+  background-color: dimgrey;
+}
+
+@keyframes falling {
+  0%{
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(500px) rotate(1000deg);
+  }
+}
+
+@media(max-width:375px) {
+  body {background-color:grey;}
+  .main-wrapper {
+    padding:0;
+  }
+  #game-start {
+    width: 100%;
+    left:0;
+  }
+
+  .game-header h1 {
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 6px;
+  }
+
+  .clutter-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .game-stats {
+    flex-direction: column;
+  }
+
+  .stat-col-left {
+    width: 100%;
+    height:50%;
+    align-items: center;
+  }
+
+  .stat-col-right {
+    width:100%;
+    height:50%;
+  }
+
+  .health-header h1, .score-header h1, .money-header h1 {
+    font-size: 1.3em;
+}
+  #game-stat-section, #score-section, .yardsale-section, #money-section {
+    margin: 5px 0;
+  }
+
+
+}

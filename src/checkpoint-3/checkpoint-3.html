@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/yaz8fiw.css">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./animate.css">
+  <title>CheckPoint3: Invasion of the Clutter</title>
+</head>
+<body>
+  <div class="sound-effects hidden">
+    <audio id="bad">
+      <source src="sounds/bad.wav" type="audio/mpeg">
+    </audio>
+    <audio id="cha-ching">
+      <source src="sounds/cha-ching.wav" type="audio/mpeg" preload>
+    </audio>
+    <audio id="woosh-punch">
+      <source src="sounds/woosh-punch.wav" type="audio/mpeg" preload>
+    </audio>
+    <audio id="game-start-woosh">
+      <source src="sounds/game-start-woosh.wav" type="audio/mpeg" preload>
+    </audio>
+    <audio id="game-music">
+      <source src="sounds/game-music.wav" type="audio/mpeg" preload>
+    </audio>
+  </div>
+  <div class="main-wrapper">
+    <div class="inner-wrapper">
+      <div class="game-header">
+        <h1>Clutter Buster</h1>
+      </div>
+      <div class="game-description">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias beatae consectetur rem porro rerum, esse, culpa nihil optio facere, qui veniam earum! Explicabo, sed. Necessitatibus dolor odit omnis voluptatum facere?</p>
+      </div>
+      <div class="game-wrapper">
+        <div class="game-display inactive">
+          <div id="game-start" onclick="startGame()"><h1>Start Game</h1></div>
+          <!-- <div class="clutter-box 1"></div> -->
+        </div>
+      </div>
+      <div class="game-stats">
+        <div class="stat-col-left">
+          <div class="section" id="game-stat-section">
+            <div class="header health-header">
+              <h1>Closet Space : </h1>
+            </div>
+            <div class="display health-display animated">
+              <h1 id="health-display"></h1>
+            </div>
+          </div>
+          <div class="section" id="score-section">
+            <div class="header score-header">
+              <h1>Clutters Busted : </h1>
+            </div>
+            <div class="display score-display">
+              <h1 id="score-display"></h1>
+            </div>
+          </div>
+        </div>
+        <div class="stat-col-right">
+          <div class="yardsale-section">
+            <div class="yardsale" id="yardsale" onclick="hostYardsale()">
+              <h1>Host Yard Sale</h1>
+            </div>
+          </div>
+            <div class= "section" id="money-section">
+              <div class="header money-header">
+                <h1>Money Earned : </h1>
+              </div>
+              <div class="display score-display">
+                <h1 id="money-display"></h1>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="./jquery.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
