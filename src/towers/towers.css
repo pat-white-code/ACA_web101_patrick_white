@@ -15,6 +15,10 @@ body {
   border: 1px solid lightgray;
 }
 
+[data-row]:hover{
+  cursor: grab;
+}
+
 [data-row].red {
   background-color: #f6c5c5;
 }
@@ -37,22 +41,22 @@ body {
 }
 
 [data-color="blue"] {
-  height: 33px;
+  height: 30px;
   background-color: blue;
 }
 
 [data-color="green"] {
-  height: 33px;
+  height: 40px;
   background-color: green;
 }
 
 [data-color="red"] {
-  height: 33px;
+  height: 50px;
   background-color: red;
 }
 
 [data-color="yellow"] {
-  height: 33px;
+  height: 60px;
   background-color: yellow;
 }
 
