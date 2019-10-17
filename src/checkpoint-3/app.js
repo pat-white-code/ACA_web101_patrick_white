@@ -18,6 +18,7 @@ let chaChingSound = $('#cha-ching')[0];
 let wooshPunchSound = $('#woosh-punch')[0];
 let gameStartWoosh = $('#game-start-woosh')[0];
 let gameMusic = $('#game-music')[0];
+let newGame = null;
 
 
 //Arrays of classes for use with pickRandom() and makeClutter(). styled in styles.css
@@ -132,7 +133,22 @@ function loseHealth(){
   console.log('userHealth : ', userHealth);
   updateHealthDisplay();
   playSound(badSound);
+  checkGameOver();
+}
 
+function gameOver() {
+  gameMusic.pause();
+  gameDisplay.addClass('inactive');
+  gameDisplay.html('<div id="game-start" class="animated bounceInDown" onclick="startGame()"><h1>Game Over</h1></div>');
+}
+
+function checkGameOver() {
+  if (userHealth < 1) {
+    console.log('LOSE!')
+    gameDisplay.empty();
+    clearInterval(newGame);
+    gameOver();
+  };
 }
 
 //Function for updating score 
@@ -149,14 +165,15 @@ function addPoint() {
 function startGame() {
   //Removes start box from display
   gameStart.addClass('animated bounceOutLeft');
-  gameStart.on('animationend', ()=>{
+  gameStart.on('animationend', ()=>{  
     gameDisplay.removeClass('inactive');
   })
 
   //Play Sound effect
   playSound(gameStartWoosh);
   //Starts cluttermaker in 1 seconds
-  setTimeout(clutterMaker, 2000);
+  // setTimeout(clutterMaker, 2000);
+  newGame = setInterval(clutterMaker, 3000);
   //Plays game music
   playSound(gameMusic);
 }
@@ -192,5 +209,5 @@ function clutterMaker() {
   })
 
   //restart this function every 3 seconds
-  setTimeout(clutterMaker, x*1000);
+  // setTimeout(clutterMaker, x*1000);
 }
