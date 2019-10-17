@@ -18,6 +18,7 @@ let chaChingSound = $('#cha-ching')[0];
 let wooshPunchSound = $('#woosh-punch')[0];
 let gameStartWoosh = $('#game-start-woosh')[0];
 let gameMusic = $('#game-music')[0];
+let newGame = null; //So game does not start immediately
 
 
 //Arrays of classes for use with pickRandom() and makeClutter(). styled in styles.css
@@ -28,7 +29,9 @@ const colorsArray = ['coral', 'dark-olive-green', 'dim-grey'];
 //Creates function to pick random item from array
 function pickRandom(array) {
   arrayLength = array.length
+  //Returns random number 0-.99 * length of items in array, floored to whole integer. array length=1 returns 0.
   randomIndex = Math.floor(Math.random()*arrayLength);
+  //For example: colorsArry[1]
   return array[randomIndex];
 }
 
@@ -129,10 +132,25 @@ function checkIfYardsale() {
 function loseHealth(){
   animateElement(healthSection, 'shake', 'faster');
   userHealth--;
-  console.log('userHealth : ', userHealth);
+  console.log('userHealth : ', userHealth); //TESTING PURPOSES
   updateHealthDisplay();
   playSound(badSound);
+  checkGameOver();
+}
 
+function gameOver() {
+  gameMusic.pause(); //Stop game Music
+  gameDisplay.addClass('inactive'); //Makes gameDisplay dark
+  gameDisplay.html('<div id="game-start" class="animated bounceInDown" onclick="startGame()"><h1>Game Over</h1></div>');// Animates in gameOver box similar to start game box. Don't click on this box.
+}
+
+function checkGameOver() {
+  if (userHealth < 1) {
+    console.log('LOSE!') //TESTING
+    gameDisplay.empty(); //Clears game of clutters
+    clearInterval(newGame); //Stops clutterMaker
+    gameOver();
+  };
 }
 
 //Function for updating score 
@@ -147,26 +165,27 @@ function addPoint() {
 
 //CREATES TIMED CLUTTER-DROPS
 function startGame() {
-  //Removes start box from display
+  //Removes start box from display. This could be refactored with animateElement function.
   gameStart.addClass('animated bounceOutLeft');
-  gameStart.on('animationend', ()=>{
+  gameStart.on('animationend', ()=>{  
     gameDisplay.removeClass('inactive');
   })
 
   //Play Sound effect
   playSound(gameStartWoosh);
-  //Starts cluttermaker in 1 seconds
-  setTimeout(clutterMaker, 2000);
+
+  // Starts a new game.
+  newGame = setInterval(clutterMaker, 3000);
+
   //Plays game music
   playSound(gameMusic);
 }
 
 function clutterMaker() {
-  x = 3; // Sets repeated timer for clutter-maker in Seconds
-  //Sets random color/clutter-type
+  //Sets random color.
   let randomColor = pickRandom(colorsArray);
 
-  //sets random position
+  //sets random position.
   let randomPosition = pickRandom(positionArray);
 
   //creates element
@@ -190,7 +209,4 @@ function clutterMaker() {
     loseHealth();
     newBox.remove();
   })
-
-  //restart this function every 3 seconds
-  setTimeout(clutterMaker, x*1000);
 }

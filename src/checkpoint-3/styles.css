@@ -254,13 +254,16 @@ body {
 /* Creates color classes for JS */
 
 .coral {
-  background-image: url('./img/clutter.jpeg');
+  background-image: url('./img/clutter.png');
 }
 .dark-olive-green {
-  background-image: url(./img/old-clothes.webp);
+  background-image: url('./img/pile-of-clothes.png');
+  width: 200px;
+  height: 200px;
 }
 .dim-grey {
-  background-color: dimgrey;
+  background-image: url('./img/dvd-player.png');
+  width: 150px;
 }
 
 @keyframes falling {
