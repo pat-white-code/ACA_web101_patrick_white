@@ -15,8 +15,23 @@ class Person {
 }
 
 class Teacher extends Person{
-  constructor(subject, grade){
-    this.subject = subject;
+  constructor(first, last, age, gender, interests, subject, grade){
+    super(first, last, age, gender, interests);
+
+    this._subject = subject;
     this.grade = grade;
   }
+
+  get subject(){
+    return this._subject;
+  }
+
+  set subject(newSubject){
+    let oldSubject = this._subject;
+    this._subject = newSubject;
+    console.log(`No longer teaching ${oldSubject}. Now teaching ${this._subject}!`)
+  }
+
 }
+
+let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark Arts', 5);
