@@ -1,12 +1,5 @@
 function Person(first, last, age, gender, interests) 
 {
-  if(gender === 'male'){
-    this.pronoun = 'He'
-  } else if (gender === 'female'){
-    this.pronoun = 'She'
-  } else {
-    this.pronoun = 'They'
-  };
   this.name = {
     first: first,
     last: last
@@ -46,13 +39,14 @@ function Person(first, last, age, gender, interests)
   };
 }
 
+Person.prototype.farewell = function(){
+  alert(`${this.name.first} has left the building. Bye for now!`);
+}
+
 
 const person1 = new Person ('Bob', 'Smith', 32, 'male', ['drawing', 'improv comedy', 'music', 'skiing']);
-
 const person2 = new Person ('Sarah', 'Collier', 41, 'female', ['jogging', 'coding']);
-
 const person3 = new Person ('Sarah', 'Collier', 41, null, ['jogging', 'coding']);
-
 
 
 // this.bio = function(){
