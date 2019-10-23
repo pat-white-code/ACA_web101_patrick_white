@@ -5,6 +5,7 @@ btn.onclick = function() {
   var code = input.value;
   para.textContent = eval(code);
 }
+
 function Person(first, last, age, gender, interests) {
   this.name = {
     first,
