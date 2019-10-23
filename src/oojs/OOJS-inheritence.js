@@ -91,3 +91,21 @@ Teacher.prototype.greeting = function() {
 };
 
 let teacher1 = new Teacher('Dave', 'Griffith', 31, 'male', ['football', 'cookery'], 'mathematics');
+
+function Student(first, last, age, gender, interests, classes){
+  Person.call(this, first, last, age, gender, interests);
+  this.classes = classes;
+}
+
+Student.prototype = Object.create(Person.prototype);
+
+Object.defineProperty(Student.prototype, 'constructor', {
+value: Student,
+enumerable: false,
+writable: true});
+
+Student.prototype.greeting = function() {
+  alert(`Yo I'm ${this.name.first}! This year I'm taking ${this.classes[0]} and ${this.classes[1]}!`)
+}
+
+let student1 = new Student ('Pat', 'White', 33, 'male', ['coding', 'guitar'], ['web101', 'js211']);
